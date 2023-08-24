@@ -50,6 +50,8 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Melhorar reputação da empresa    | Coletar avaliações dos clientes                  | Avaliações positivas recebidas          |
 | Fidelização do cliente           | Implementar programas de fidelidade              | Benefícios para usuários fiéis          |
 
+
+
 ## Gerenciamento de Tempo
 
 Segundo Vargas (2018), o gerenciamento do cronograma tem como principal objetivo garantir que o projeto seja concluído dentro do prazo determinado.
@@ -70,6 +72,49 @@ A seguir, encontra-se o diagrama de Gantt do projeto Ifix, utilizado como ferram
 ![Grafico de Gantt](img/grafico_de_gantt.jpg)
 
 
+## Gerenciamento de Equipe
+
+O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados.
+
+A Gestão do Código Fonte e a Divisão de Papéis da equipe, bem como o ambiente utilizado para o gerenciamento de recursos, encontram-se detalhados no tópico de Metodologia.
+
+A seguir, é descrito o planejamento que auxiliará e direcionará a gestão de recursos durante o projeto.
+
+>**Planejar o gerenciamento de recursos**
+-	Planejar como será feita a gestão de recursos do projeto;
+-	Consultar opinião especializada sobre esse tipo de projeto;
+-	Obter documentações necessárias para o desenvolvimento do projeto;
+-	Atribuir funções às pessoas da equipe;
+-	Planejar o cronograma de trabalho.
+
+>**Estimar os recursos das atividades**
+-	Analisar quais os recursos necessários para realização das atividades e quantificar;
+-	Recursos humanos: desenvolvedores e gestores do projeto;
+-	Recursos materiais: seis computadores com editores de código fonte instalados;
+-	Acesso ao Figma;
+-	Aulas PUC-Minas.
+
+>**Adquirir recursos**
+-	Acesso às aulas da PUC Minas via matrícula de alunos;
+-	Acesso ao figma por contas vinculadas (gmail);
+-	Alunos e componentes do projeto atuam como desenvolvedores e gestores;
+-	Utilização de computadores dos alunos do projeto.
+
+>**Desenvolver a equipe**
+-	Treinamento da equipe em React Native;
+-	Treinamento da equipe em gerenciamento de projetos;
+-	Treinamento na utilização do Figma;
+-	Soft skills.
+
+>**Gerenciar a equipe**
+-	Atualizar a documentação;
+-	Atualizar outros fatores que podem influenciar no desenvolvimento do projeto;
+-	Planejamento por entregas;
+-	Atualização do plano de gerenciamento do projeto.
+
+>**Controlar os recursos**
+-	Informações sobre o desempenho e andamento do trabalho;
+-	Atualizações sobre o plano de gerenciamento de recursos.
 
 
 ## Gestão de Orçamento
