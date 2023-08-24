@@ -1,4 +1,4 @@
-# Aplicação Móvel
+# Ifix
 
 `Análise e desenvolvimento de Sistemas`
 
@@ -12,7 +12,7 @@ O aplicativo para a assistência técnica autorizada Apple foi projetado para fo
 
 -
 - Ronald Justiniano Costa
-- TAciana Emanuela Campos Vitorino
+- Taciana Emanuela Campos Vitorino
 - Jeosafa Boy Eller
 - Felipe Corrêa Carneiro
 
