@@ -51,6 +51,33 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Fidelização do cliente           | Implementar programas de fidelidade              | Benefícios para usuários fiéis          |
 
 
+## Gerenciamento de Projeto
+
+De acordo com Vargas (2018), "[p]rojeto é um empreendimento não repetitivo, caracterizado por uma sequência clara e lógica de eventos, com início, meio e fim, que se destina a atingir um objetivo claro e definido, sendo conduzido por pessoas dentro de parâmetros predefinidos de tempo, custo, recursos envolvidos e qualidade." (VARGAS, 2018). Com essa definição em mente, desenvolvemos a documentação e o aplicativo AutoApp, tomando como base, também, os pressupostos sumarizados no PMBoK. 
+
+De acordo com a sexta edição do PMBoK, as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos, um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e relacionam-se de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
+
+Todo projeto, antes de iniciado, deve ser avaliado sob uma perspectiva financeira. Há algumas técnicas que podem ser utilizadas para fornecer tal perspectiva: valor presente líquido, taxa interna de retorno, análise de custo-benefício, payback ou cost of delay. Além disso, ter a visão do produto é de extrema importância para o início e o fim do projeto. 
+
+## Divisão de Papéis
+
+A equipe AutoApp utiliza métodos ágeis como metodologia de trabalho de acompanhamento do projeto. O método Scrum foi definido como base do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
+
+-	Product Owner (P.O.): Jeosafa Boy Eller;
+-	Scrum Master: Ronald Justiniano Costa ;
+-	Equipe de Desenvolvimento: Taciana Emanuela Campos Vitorino, Ronald Justiniano Costa, Jeosafa Boy Eller
+-	Equipe de Design: Felipe Corrêa Carneiro, Taciana Emanuela Campos Vitorino
+
+A equipe trabalhará com divisões de tarefas e com encontros semanais após reunião com o P.O. para planejar e tirar dúvidas a respeito das tarefas delegadas.
+Na primeira reunião de cada etapa, as tarefas serão organizadas e distribuídas.
+Na segunda-feira que precede a entrega da etapa, a equipe irá se se reunir para revisar e alinhar se o que foi solicitado está pronto para ser entregue.
+A Scrum Master acompanhará estas sprints (tarefas) semanalamente.
+
+O projeto seguirá o seguinte fluxo de metodologia:
+
+![Scrum](img/SCRUM.png)
+
+Utilizando essa metodologia, prevê-se ter uma maior produtividade, melhoria na comunicação, maior qualidade, integração entre os integrantes, respostas a imprevistos.
 
 ## Gerenciamento de Tempo
 
