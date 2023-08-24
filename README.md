@@ -10,7 +10,7 @@ O aplicativo para a assistência técnica autorizada Apple foi projetado para fo
 
 ## Integrantes
 
--
+- Gustavo de Abreu Santos
 - Ronald Justiniano Costa
 - Taciana Emanuela Campos Vitorino
 - Jeosafa Boy Eller
