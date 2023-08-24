@@ -1,46 +1,73 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+No cenário atual de avanços tecnológicos acelerados, os dispositivos eletrônicos tornaram-se uma extensão fundamental de nossas vidas. Entre as marcas líderes que conquistaram nosso entusiasmo e confiança, a Apple se destaca por sua dedicação implacável à inovação e qualidade. No entanto, mesmo os produtos de tecnologia mais excepcionais podem, ocasionalmente, requerer assistência para manter seu desempenho impecável.
+
+É aqui que a jornada da assistência técnica autorizada Apple começa, oferecendo um elo crucial entre a excelência tecnológica e a satisfação do cliente.
+
+Uma assistência técnica autorizada Apple é um ponto de contato essencial para os proprietários de produtos da marca enfrentarem desafios técnicos, desde pequenas consultas até reparos mais complexos.
+ A Apple, reconhecida por sua estética inconfundível e funcionalidades inovadoras, estabeleceu um padrão elevado para a experiência do usuário.
+  Como resultado, a assistência técnica autorizada deve alinhar-se a esses padrões, oferecendo um serviço que não apenas restaure a funcionalidade do dispositivo, mas também reflita a atenção aos detalhes e a dedicação à excelência que a marca representa.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Um problema comum que uma assistência técnica autorizada pode enfrentar no atendimento ao cliente é a falta de comunicação clara e transparente em relação ao status dos reparos. Isso pode levar a frustração e insatisfação por parte dos clientes. Por outro lado a empresa sofre com um número alto de ligações e menssagens para responder, que tem por consequência uma atraso no atendimento ao cliente.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Considerando o problema apresentado, o objetivo do projeto é desenvolver uma aplicação móvel prática e intuitiva, que oferece aos usuários um meio para acompanhar o andamento dos reparos de seus aparelhos.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+Com o Aplicativo, será possível:
+-  Informar ao cliente qual o tipo de reparo a ser feito.
+-   O prazo para o serviço.
+-   O status do serviço, informando quando finalizado.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A criação deste aplicativo irá trazer diversos benefícios a empresa e ao usuário:
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+-   Satisfação do Cliente: A comunicação clara e transparente eleva a confiança no serviço a ser prestado, já que o cliente consegue verificar que seu aparelho está sendo consertado.
+-   Reputação: O bom atendimento da empresa refletirá em boas recomendações em midias sociais  e em canais de avaliação online. 
+-   Fidelização do cliente: A empresa poderá usar o cadastro dos usuários para ações de marketing.
+-   Garantia: O cliente terá a comprovanção dos serviços prestados pela assistência técnica autorizada.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+O público-alvo para o aplicativo de assistência técnica autorizada Apple é composto por usuários de produtos Apple que necessitam de serviços de reparo, suporte e manutenção para seus dispositivos. Esse grupo de pessoas abrange uma ampla gama de idades e interesses, mas compartilha a característica de possuir produtos da marca Apple e procurar soluções de assistência técnica confiáveis e convenientes.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+## Requisitos
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicamos uma técnica de priorização de requisitos e detalhamos, em sequência, como a técnica foi aplicada.
+
+A técnica MoSCoW foi aplicada para priorização dos requsitos:
+
+Must Have (Tenho que fazer)
+Should Have (Devo fazer)
+Could Have (Poderia fazer)
+Won’t Have (Não vou fazer)
+Nesse sentido a ordem de importância das tarefas vai seguindo uma ordem decrescente, em que "Must Have" são as tarefas mais relevantes e as "Won’t Have" são tarefas que podem ficar para depois.
+
+## Requisitos Funcionais
+
+ID	Descrição do Requisito	Prioridade
+RF-001	O sistema deverá permitir a criação de um perfil de usuário para o responsável do aparelho Apple ao seu e-mail.	ALTA
+RF-002	O sistema deverá permitir a alteração e a exclusão dos dados de usuários, nesse caso, excluindo também qualquer aparelho Apple  vinculado a ele.	ALTA
+RF-003	O sistema deverá permitir a inserção, a alteração e a exclusão dos dados de prestadores de serviços afiliados.	ALTA
+RF-004	O sistema deverá permitir a adição de equipamento ( modelo,tipo do equipamento, etc.), permitindo a exibição de seus dados básicos.	ALTA
+RF-005	O sistema deverá armazenar os dados  de manutenções efetuadas.	ALTA
+RF-006	O sistema deverá gerar relatórios sobre os dados preenchidos pelos usuários.	MÉDIA
+RF-007	O sistema deverá permitir a edição e a exclusão dos dados do aparelho Apple. 	MÉDIA
+RF-008	O sistema deve emitir lembretes para os usuários.	MÉDIA
+RF-009	O sistema deverá permitir a busca em lojas conveniadas próximas a sua localidade.	BAIXA
+## Requisitos não Funcionais
+ID	Descrição do Requisito	Prioridade
+RNF-001	O sistema deve ser responsivo para rodar em diversos dispositivos móveis	ALTA
+RNF-002	O sistema deve ser implementado utilizando React Native.	ALTA
+RNF-003	A persistência dos dados será feita no banco JSON Server.	MÉDIA
+RNF-004	O sistema deve processar requisições do usuário em no máximo 11 segundos.	BAIXA
+Restrições
+O projeto está restrito pelos itens apresentados na tabela a seguir.
+
+ID	Restrição
+01	O projeto deverá ser entregue até 27/08/2023.
+02	Não pode ser desenvolvido um módulo de backend.
+03	Proibida a terceirização de desenvolvimento do sistema em sua totalidade ou de módulos isolados.
