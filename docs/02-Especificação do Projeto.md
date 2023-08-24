@@ -50,6 +50,21 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Melhorar reputação da empresa    | Coletar avaliações dos clientes                  | Avaliações positivas recebidas          |
 | Fidelização do cliente           | Implementar programas de fidelidade              | Benefícios para usuários fiéis          |
 
+## Gerenciamento de Tempo
+
+Segundo Vargas (2018), o gerenciamento do cronograma tem como principal objetivo garantir que o projeto seja concluído dentro do prazo determinado.
+
+Com diagramas bem organizados, que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
+
+Para construir um bom diagrama, deve-se partir de um conjunto de atividades definidas, sequenciando-as de acordo com as dependências conhecidas entre si, estimando as durações das atividades individualmente e desenvolvendo a estrutura do projeto, em termos das tarefas e suas interações. É preciso, ademais, definir uma abordagem de ciclo de vida mais adequada ao projeto em questão.
+
+O diagrama de rede pode ser entendido como um gráfico que mostra as tarefas que precisam ser realizadas para a finalização de um projeto. Além de mostrar as relações contínuas de atividades, mostra como fazer as atividades e o cronograma determina quando fazer as tarefas do projeto.
+
+A seguir, encontra-se o diagrama de redes do projeto Ifix.
+
+![Diagrama de Redes](img/diagrama_de_rede.png)
+
+
 
 ## Gestão de Orçamento
 
