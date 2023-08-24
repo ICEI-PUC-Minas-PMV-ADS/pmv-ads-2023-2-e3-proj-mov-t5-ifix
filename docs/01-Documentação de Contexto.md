@@ -1,7 +1,12 @@
 # Introdução
 
-No cenário atual de avanços tecnológicos acelerados, os dispositivos eletrônicos tornaram-se uma extensão fundamental de nossas vidas. Entre as marcas líderes que conquistaram nosso entusiasmo e confiança, a Apple se destaca por sua dedicação implacável à inovação e qualidade. No entanto, mesmo os produtos de tecnologia mais excepcionais podem, ocasionalmente, requerer assistência para manter seu desempenho impecável. É aqui que a jornada da assistência técnica autorizada Apple começa, oferecendo um elo crucial entre a excelência tecnológica e a satisfação do cliente.
-Uma assistência técnica autorizada Apple é um ponto de contato essencial para os proprietários de produtos da marca enfrentarem desafios técnicos, desde pequenas consultas até reparos mais complexos. A Apple, reconhecida por sua estética inconfundível e funcionalidades inovadoras, estabeleceu um padrão elevado para a experiência do usuário. Como resultado, a assistência técnica autorizada deve alinhar-se a esses padrões, oferecendo um serviço que não apenas restaure a funcionalidade do dispositivo, mas também reflita a atenção aos detalhes e a dedicação à excelência que a marca representa.
+No cenário atual de avanços tecnológicos acelerados, os dispositivos eletrônicos tornaram-se uma extensão fundamental de nossas vidas. Entre as marcas líderes que conquistaram nosso entusiasmo e confiança, a Apple se destaca por sua dedicação implacável à inovação e qualidade. No entanto, mesmo os produtos de tecnologia mais excepcionais podem, ocasionalmente, requerer assistência para manter seu desempenho impecável.
+
+É aqui que a jornada da assistência técnica autorizada Apple começa, oferecendo um elo crucial entre a excelência tecnológica e a satisfação do cliente.
+
+Uma assistência técnica autorizada Apple é um ponto de contato essencial para os proprietários de produtos da marca enfrentarem desafios técnicos, desde pequenas consultas até reparos mais complexos.
+ A Apple, reconhecida por sua estética inconfundível e funcionalidades inovadoras, estabeleceu um padrão elevado para a experiência do usuário.
+  Como resultado, a assistência técnica autorizada deve alinhar-se a esses padrões, oferecendo um serviço que não apenas restaure a funcionalidade do dispositivo, mas também reflita a atenção aos detalhes e a dedicação à excelência que a marca representa.
 
 ## Problema
 
@@ -12,18 +17,18 @@ Um problema comum que uma assistência técnica autorizada pode enfrentar no ate
 Considerando o problema apresentado, o objetivo do projeto é desenvolver uma aplicação móvel prática e intuitiva, que oferece aos usuários um meio para acompanhar o andamento dos reparos de seus aparelhos.
 
 Com o Aplicativo, será possível:
-•   Informar ao cliente qual o tipo de reparo a ser feito.
-•   O prazo para o serviço.
-•   O status do serviço, informando quando finalizado.
+-  Informar ao cliente qual o tipo de reparo a ser feito.
+-   O prazo para o serviço.
+-   O status do serviço, informando quando finalizado.
 
 ## Justificativa
 
 A criação deste aplicativo irá trazer diversos benefícios a empresa e ao usuário:
 
-•   Satisfação do Cliente: A comunicação clara e transparente eleva a confiança no serviço a ser prestado, já que o cliente consegue verificar que seu aparelho está sendo consertado.
-•   Reputação: O bom atendimento da empresa refletirá em boas recomendações em midias sociais  e em canais de avaliação online. 
-•   Fidelização do cliente: A empresa poderá usar o cadastro dos usuários para ações de marketing.
-•   Garantia: O cliente terá a comprovanção dos serviços prestados pela assistência técnica autorizada.
+-   Satisfação do Cliente: A comunicação clara e transparente eleva a confiança no serviço a ser prestado, já que o cliente consegue verificar que seu aparelho está sendo consertado.
+-   Reputação: O bom atendimento da empresa refletirá em boas recomendações em midias sociais  e em canais de avaliação online. 
+-   Fidelização do cliente: A empresa poderá usar o cadastro dos usuários para ações de marketing.
+-   Garantia: O cliente terá a comprovanção dos serviços prestados pela assistência técnica autorizada.
 
 ## Público-Alvo
 
@@ -42,6 +47,7 @@ Won’t Have (Não vou fazer)
 Nesse sentido a ordem de importância das tarefas vai seguindo uma ordem decrescente, em que "Must Have" são as tarefas mais relevantes e as "Won’t Have" são tarefas que podem ficar para depois.
 
 ## Requisitos Funcionais
+
 ID	Descrição do Requisito	Prioridade
 RF-001	O sistema deverá permitir a criação de um perfil de usuário para o responsável do aparelho Apple ao seu e-mail.	ALTA
 RF-002	O sistema deverá permitir a alteração e a exclusão dos dados de usuários, nesse caso, excluindo também qualquer aparelho Apple  vinculado a ele.	ALTA
