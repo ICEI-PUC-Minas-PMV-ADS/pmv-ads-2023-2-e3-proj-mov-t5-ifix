@@ -61,7 +61,7 @@ Todo projeto, antes de iniciado, deve ser avaliado sob uma perspectiva financeir
 
 ## Divisão de Papéis
 
-A equipe AutoApp utiliza métodos ágeis como metodologia de trabalho de acompanhamento do projeto. O método Scrum foi definido como base do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
+A equipe Ifix utiliza métodos ágeis como metodologia de trabalho de acompanhamento do projeto. O método Scrum foi definido como base do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
 
 -	Product Owner (P.O.): Jeosafa Boy Eller;
 -	Scrum Master: Ronald Justiniano Costa ;
