@@ -58,16 +58,95 @@ RF-006	O sistema deverá gerar relatórios sobre os dados preenchidos pelos usu�
 RF-007	O sistema deverá permitir a edição e a exclusão dos dados do aparelho Apple. 	MÉDIA
 RF-008	O sistema deve emitir lembretes para os usuários.	MÉDIA
 RF-009	O sistema deverá permitir a busca em lojas conveniadas próximas a sua localidade.	BAIXA
+
 ## Requisitos não Funcionais
 ID	Descrição do Requisito	Prioridade
 RNF-001	O sistema deve ser responsivo para rodar em diversos dispositivos móveis	ALTA
 RNF-002	O sistema deve ser implementado utilizando React Native.	ALTA
 RNF-003	A persistência dos dados será feita no banco JSON Server.	MÉDIA
 RNF-004	O sistema deve processar requisições do usuário em no máximo 11 segundos.	BAIXA
-Restrições
-O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-ID	Restrição
-01	O projeto deverá ser entregue até 27/08/2023.
-02	Não pode ser desenvolvido um módulo de backend.
-03	Proibida a terceirização de desenvolvimento do sistema em sua totalidade ou de módulos isolados.
+## Restrições de Projeto:
+
+## ID	Restrição 01:
+Proibida a subcontratação ou terceirização de desenvolvimento do sistema em sua totalidade ou de módulos isolados.
+## ID Restrição 02:
+O projeto deve ser desenvolvido exclusivamente utilizando o framework React Native e a linguagem de programação JavaScript.
+## ID Restrição 03:
+Está permitida a utilização de frameworks prontos, como o Firebase, para facilitar a implementação do backend, funcionalidades de login e gestão de banco de dados.
+## ID Restrição 04:
+Todos os componentes, módulos e tarefas associadas ao projeto devem ser entregues dentro do prazo estipulado, sem exceções.
+## ID Restrição 05:
+Não será permitida a utilização de outras linguagens de programação além de JavaScript ou frameworks que não sejam compatíveis ou recomendados para uso com React Native.
+
+## Casos de Uso:
+
+## 1. Cadastro de Usuário
+Identificador: CU001
+Nome: Cadastro de Usuário e Produtos Apple
+Ator Principal: Usuário Final
+Pré-condições: O usuário deve ter baixado o aplicativo e ter acesso à internet.
+Fluxo Principal:
+ 1.	O usuário inicia o aplicativo e seleciona a opção "Cadastrar".
+	2. O sistema apresenta um formulário de cadastro.
+	3. O usuário insere suas informações básicas: nome, e-mail e senha.
+	4. O usuário insere detalhes do produto Apple, incluindo tipo de dispositivo, modelo e número de série.
+	5. O usuário seleciona "Concluir Cadastro".
+	6. O sistema valida as informações e confirma o cadastro.
+	7. O sistema envia um e-mail de confirmação ao usuário.
+
+Fluxo Alternativo:
+A. Em qualquer ponto, se o usuário decidir não prosseguir com o cadastro:
+	1. O usuário seleciona "Cancelar".
+	2. O sistema volta para a tela inicial.
+
+Pós-condições: O usuário está cadastrado no sistema e pode começar a solicitar serviços de assistência técnica.
+
+## 2. Solicitar Assistência Técnica
+Identificador: CU002
+Nome: Solicitar Assistência Técnica
+Ator Principal: Usuário Final
+Pré-condições: O usuário deve estar cadastrado e logado no aplicativo.
+Fluxo Principal:
+	1. O usuário inicia o aplicativo e faz login.
+	2. O usuário seleciona a opção "Solicitar Assistência".
+	3. O sistema apresenta um formulário de solicitação.
+	4. O usuário descreve o problema que está enfrentando com seu dispositivo Apple.
+	5. O usuário seleciona "Enviar Solicitação".
+	6. O sistema registra a solicitação e notifica a assistência técnica autorizada.
+
+Fluxo Alternativo:
+A. Se o usuário decide voltar antes de enviar a solicitação:
+	1. O usuário seleciona "Voltar".
+	2. O sistema retorna à tela inicial.
+
+Pós-condições: O pedido de assistência do usuário é registrado e a assistência técnica é notificada.
+
+## 3. Acompanhar Status do Reparo
+Identificador: CU003
+Nome: Acompanhar Status do Reparo
+Ator Principal: Usuário Final
+Pré-condições: O usuário deve ter uma solicitação de reparo ativa.
+Fluxo Principal:
+	1. O usuário inicia o aplicativo e faz login.
+	2. O usuário seleciona a opção "Acompanhar Reparo".
+	3. O sistema mostra os detalhes da solicitação de reparo, incluindo o status atual.
+	4. O usuário verifica as informações.
+	5. Se desejar, o usuário pode selecionar "Atualizar" para verificar se houve mudanças no status do reparo.
+
+Fluxo Alternativo:
+A. Se o reparo estiver concluído:
+	1. O sistema mostra a opção "Avaliar Serviço".
+	2. O usuário pode fornecer feedback sobre a qualidade do serviço.
+
+Pós-condições: O usuário está informado sobre o status atual de seu reparo
+
+
+
+
+
+
+
+
+
+
