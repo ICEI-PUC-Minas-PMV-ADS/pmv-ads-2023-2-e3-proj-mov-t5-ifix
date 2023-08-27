@@ -51,6 +51,74 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Fidelização do cliente           | Implementar programas de fidelidade              | Benefícios para usuários fiéis          |
 
 
+
+#### Código & Detalhes: Gerais
+| Cod		| Detalhes	   |
+| :--:   | :--:		   |
+| Po		| Jeosefa      |
+| Responsável	| {nome}	|
+> A tabela `Código & Detalhes: Gerais` acima contém informações de identificação e detalhes sobre elementos adicionais do projeto.
+
+
+#### Código & Detalhes: Caso de testes
+| Cod	| Detalhes							|
+| :--:	| :--:								|
+| CT-1	| Teste de Cadastro de Novos Usuários e Produtos Apple		|
+| CT-2	| Teste de Cadastro com Dados Inválidos				|
+| CT-3	| Teste de Cadastro de Produtos com Informações Incompletas	|
+| CT-4	| Teste de Acompanhamento de Status de Atualização de Status	|
+| CT-5	| Teste de Notificação						|
+| CT-6	| Teste de Envio da Avaliação e Feedback do Cliente		|
+>Esta tabela relaciona os códigos de Casos de Testes (CT) aos seus detalhes específicos. 
+Os Casos de Testes representam situações de teste que serão executadas para validar a funcionalidade do projeto.
+
+
+#### Código & Detalhes: Requisitos Funcionais
+| Cod	| Detalhes					|
+| :--:	| :--:						|
+| RF-1	| Cadastro de usuários e produtos Apple		|
+| RF-2 	| Solicitação de assistência técnica		|
+| RF-3	| Acompanhamento do status de reparo		|
+| RF-4	| Notificações sobre atualizações no status	|
+| RF-5	| Acesso a guias de solução de problemas	|
+| RF-6	| Avaliação e feedback pós-reparo		|
+>Nesta tabela, os códigos de Requisitos Funcionais (RF) estão vinculados às suas descrições correspondentes. 
+Os Requisitos Funcionais definem as funcionalidades específicas que o projeto deve oferecer para atender às necessidades dos usuários.
+
+
+#### Código & Detalhes: Requisitos Não Funcionais
+| Cod	| Detalhes									|
+| :--:	| :--:                                                                     |
+| RNF-1	| O sistema deve ser responsivo para rodar em diversos dispositivos móveis	|
+| RNF-2	| O sistema deve ser implementado utilizando React Native			|
+| RNF-3	| A persistência dos dados será feita no banco JSON Server			|
+>Aqui, os códigos de Requisitos Não Funcionais (RNF) estão conectados às suas descrições. Os Requisitos Não Funcionais delineiam os critérios de desempenho, segurança e usabilidade que são importantes para o sucesso do projeto.
+
+
+## Matriz de Rastreabilidade
+A tabela a seguir apresenta a **matriz de rastreabilidade entre os elementos do projeto**. Os códigos utilizados nesta tabela correspondem aos _identificadores_ atribuídos aos `Requisitos Funcionais` (RF), `Requisitos Não Funcionais` (RNF), `Casos de Testes` (CT), e outros elementos relacionados. Cada célula da tabela mostra as _dependências_ e _relações_ entre esses _elementos_, permitindo uma _visualização clara das conexões_ que existem no âmbito do projeto.
+|	      | Responsável	| PO	   | RF-1	| RF-2	| RF-3	| RF-4	| RF-5	| RF-6	| RNF-1	| RNF-2	| RNF-3	| CT-1	| CT-2	| CT-3	| CT-4	| CT-5	| CT-6   |
+| :---:	| :---: 	      | :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:	| :--:   |
+| Resp.	|		   |	      |	      |      	|   	   |      	|	      |	      |	      |	      |	      |	      |	      |	      |      	|      	|      |
+| PO	   |	      |	      |      	|   	   |      	|	      |	      |	      |	      |	      |	      |	      |	      |      	|      	|	      |      |
+| RF-1	|		   |	      |	      |   	   |      	|	      |      	|      	|      	|      	|      	|X      	|X      	|X      	|      	|      	|      |
+| RF-2	|		   |	      |	      |      	|X      	|      	|      	|      	|      	|      	|      	|      	|X      	|      	|X      	|X      	|      |
+| RF-3	|		   |	      |      	|X      	|      	|X      	|      	|      	|      	|      	|      	|      	|      	|      	|X      	|X      	|      |
+| RF-4	|		   |	   |	|	|X	|	|X	|	|	|	|	|	|	|	|X	|	|	|
+| RF-5	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|X	|	|
+| RF-6	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|X	|
+| RNF-1	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+| RNF-2	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+| RNF-3	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+| CT-1	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+| CT-2	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+| CT-3	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+| CT-4	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+| CT-5	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+| CT-6	|		   |	   |	|	|	|	|	|	|	|	|	|	|	|	|	|	|	|
+
+
+
 ## Gerenciamento de Projeto
 
 De acordo com Vargas (2018), "[p]rojeto é um empreendimento não repetitivo, caracterizado por uma sequência clara e lógica de eventos, com início, meio e fim, que se destina a atingir um objetivo claro e definido, sendo conduzido por pessoas dentro de parâmetros predefinidos de tempo, custo, recursos envolvidos e qualidade." (VARGAS, 2018). Com essa definição em mente, desenvolvemos a documentação e o aplicativo AutoApp, tomando como base, também, os pressupostos sumarizados no PMBoK. 
