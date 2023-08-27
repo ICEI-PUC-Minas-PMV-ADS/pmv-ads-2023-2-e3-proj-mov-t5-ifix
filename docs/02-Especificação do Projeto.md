@@ -1,17 +1,8 @@
 # Especificações do Projeto
 
-1. **Objetivo Alvo**: Desenvolver uma aplicação móvel para dispositivos iOS (iPhone e iPad) que ofereça um canal de assistência de manutenção e reparo de produtos da Apple.
+<span style="color:red">Pré-requisitos: <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/AutoApp/blob/6e8341aac6887998ec783beca8ce97995d7e896a/docs/01-Documenta%C3%A7%C3%A3o%20de%20Contexto.md"> Documentação de Contexto</a></span>
 
-2. **Funcionalidades principais**:
-
-   | Cod | Funcionalidade                             | Descrição                                                                                                                                                                           |
-   | --- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | 1   | Cadastro de usuários e produtos Apple.     | Permitir que os usuários se cadastrem na plataforma usando informações básicas, como nome, e-mail e senha.                                                                          |
-   | 2   | Solicitação de assistência técnica.        | Oferecer um formulário de solicitação de assistência técnica, onde os usuários podem descrever brevemente o problema que estão enfrentando com seu dispositivo Apple.               |
-   | 3   | Acompanhamento do status de reparo.        | Após a solicitação, os usuários podem verificar o status do reparo através de uma página de acompanhamento simples.                                                                 |
-   | 4   | Notificações sobre atualizações no status. | Enviar notificações por e-mail ou mensagem SMS quando houver uma atualização significativa no status do reparo.                                                                     |
-   | 5   | Acesso a guias de solução de problemas.    | Disponibilizar algumas guias básicas de solução de problemas para problemas comuns que os usuários possam enfrentar, como reinicialização de dispositivo, problemas de conexão etc. |
-   | 6   | Avaliação e feedback pós-reparo.           | Após o reparo ser concluído, permitir que os usuários forneçam feedback sobre a qualidade do serviço.                                                                               |
+Nesta seção, apresentamos o diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais, além das restrições identificadas para o desenvolvimento deste projeto.
 
 ## Personas
 
@@ -22,7 +13,7 @@ As personas levantadas durante o processo de entendimento do problema são apres
 | 1   | Usuário Leigo                 | Uma pessoa não técnico que possui um iPhone, mas tem dificuldades em lidar com problemas técnicos. Ele busca uma solução fácil para receber ajuda quando seu dispositivo apresenta problemas. |
 | 2   | Técnico com Certificado Apple | Um profissional que deseja usar a plataforma para acessar manuais de reparo e obter informações técnicas detalhadas sobre produtos Apple, para melhor atender seus clientes.                  |
 | 3   | Estudante Universitário       | Um estudante que possui um MacBook e depende muito dele para suas tarefas acadêmicas. Ele relata que procura uma maneira rápida de obter assistência em caso de falhas.                       |
-| 4   | Cliente Fiel Apple            | Um entusiasta da Apple com vários produtos da marca, busca uma plataforma unificada para gerenciar seus dispositivos e receber suporte quando necessário.                                     |
+| 4   | Cliente Fiel Apple            | Um entusiasta da Apple com vários produtos da marca, busca uma plataforma unificada para gerenciar seus dispositivos e receber suporte quando necessário.    
 | 5   | Usuário Empresarial           | Uma pequena empresa que utiliza dispositivos Apple em sua operação diária, ele precisa de um canal eficiente para agendar reparos e minimizar a interrupção nas atividades comerciais.        |
 
 ## Histórias de Usuários
@@ -34,8 +25,120 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Usuário Leigo             | relatar problemas com meu iPhone                                 | receber instruções simples e obter assistência técnica de maneira fácil.   |
 | Técnico Certificado Apple | acessar manuais de reparo detalhados para produtos Apple         | executar reparos com mais eficácia e precisão.                             |
 | Estudante Universitário   | agendar reparos rápidos para o meu MacBook                       | evitar interrupções em minhas atividades acadêmicas e continuar produtivo. |
-| Cliente Fiel Apple        | receber notificações sobre o status do reparo do meu dispositivo | ficar atualizado sobre o progresso e estimativas de conclusão.             |
-| Usuário Empresarial       | um canal eficiente para agendar reparos                          | minimizar a interrupção nas atividades comerciais                          |
+| Cliente Fiel Apple        | receber notificações sobre o status do reparo do meu dispositivo | ficar atualizado sobre o progresso e estimativas de conclusão.             ||
+| Usuário Empresarial       | um canal eficiente para agendar reparos                          | minimizar a interrupção nas atividades comerciais                       
+
+## Requisitos
+
+As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicamos uma técnica de priorização de requisitos e detalhamos, em sequência, como a técnica foi aplicada.
+
+A técnica MoSCoW foi aplicada para priorização dos requsitos:
+
+- Must Have (Tenho que fazer)
+- Should Have (Devo fazer)
+- Could Have (Poderia fazer)
+- Won’t Have (Não vou fazer)
+
+Nesse sentido a ordem de importância das tarefas vai seguindo uma ordem decrescente, em que "Must Have" são as tarefas mais relevantes e as "Won’t Have" são tarefas que podem ficar para depois.
+
+### Requisitos Funcionais
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+| RF-001 | O sistema deverá permitir a criação de um perfil de usuário para o responsável aparelho Apple associado ao seu e-mail. | ALTA | 
+| RF-002 | O sistema deverá permitir a alteração e a exclusão dos dados de usuários, nesse caso, excluindo também qualquer aparelho Apple vinculado a ele.   | ALTA | 
+| RF-003 | O sistema deverá permitir a inserção, a alteração e a exclusão dos dados de prestadores de serviços afiliados.   | ALTA | 
+| RF-004 | O sistema deverá permitir a adição de equipamento ( modelo,tipo do equipamento, etc.), permitindo a exibição de seus dados básicos.	ALTA
+| RF-005 |O sistema deverá armazenar os dados  de manutenções efetuadas.	ALTA
+| RF-006 | O sistema deverá gerar relatórios sobre os dados preenchidos pelos usuários. | MÉDIA |
+| RF-007 | O sistema deverá permitir a edição e a exclusão dos dados do aparelho Apple
+| RF-008 | O sistema deve emitir lembretes para os usuários. | MÉDIA |
+| RF-009 | OO sistema deverá permitir a busca em lojas conveniadas próximas a sua localidade.	BAIXA
+
+### Requisitos não Funcionais
+
+|ID     | Descrição do Requisito  |Prioridade |
+|-------|-------------------------|----|
+| RNF-001 | O sistema deve ser responsivo para rodar em diversos dispositivos móveis | ALTA | 
+| RNF-002 | O sistema deve ser implementado utilizando React Native. | ALTA |
+| RNF-003 | A persistência dos dados será feita no banco MySQL.  |  MÉDIA |
+| RNF-004 | O sistema deve processar requisições do usuário em no máximo 11 segundos. |  BAIXA |
+                                            
+## Restrições de Projeto:
+
+## Restrições
+
+O projeto está restrito pelos itens apresentados na tabela a seguir.
+
+|ID| Restrição                                             |
+|--|-------------------------------------------------------|
+|01| Proibida a subcontratação ou terceirização de desenvolvimento do sistema em sua totalidade ou de módulos isolados. |
+|02|O projeto deve ser desenvolvido exclusivamente utilizando o framework React Native e a linguagem de programação JavaScript.      |
+|03| Está permitida a utilização de frameworks prontos, como o Firebase, para facilitar a implementação do backend, funcionalidades de login e gestão de banco de dados.  |
+|04| Todos os componentes, módulos e tarefas associadas ao projeto devem ser entregues dentro do prazo estipulado, sem exceções.  |
+|05| Não será permitida a utilização de outras linguagens de programação além de JavaScript ou frameworks que não sejam compatíveis ou recomendados para uso com React Native.  |
+
+## Casos de Uso:
+
+## 1. Cadastro de Usuário
+Identificador: CU001
+Nome: Cadastro de Usuário e Produtos Apple
+Ator Principal: Usuário Final
+Pré-condições: O usuário deve ter baixado o aplicativo e ter acesso à internet.
+Fluxo Principal:
+ 1.	O usuário inicia o aplicativo e seleciona a opção "Cadastrar".
+	2. O sistema apresenta um formulário de cadastro.
+	3. O usuário insere suas informações básicas: nome, e-mail e senha.
+	4. O usuário insere detalhes do produto Apple, incluindo tipo de dispositivo, modelo e número de série.
+	5. O usuário seleciona "Concluir Cadastro".
+	6. O sistema valida as informações e confirma o cadastro.
+	7. O sistema envia um e-mail de confirmação ao usuário.
+
+Fluxo Alternativo:
+A. Em qualquer ponto, se o usuário decidir não prosseguir com o cadastro:
+	1. O usuário seleciona "Cancelar".
+	2. O sistema volta para a tela inicial.
+
+Pós-condições: O usuário está cadastrado no sistema e pode começar a solicitar serviços de assistência técnica.
+
+## 2. Solicitar Assistência Técnica
+Identificador: CU002
+Nome: Solicitar Assistência Técnica
+Ator Principal: Usuário Final
+Pré-condições: O usuário deve estar cadastrado e logado no aplicativo.
+Fluxo Principal:
+	1. O usuário inicia o aplicativo e faz login.
+	2. O usuário seleciona a opção "Solicitar Assistência".
+	3. O sistema apresenta um formulário de solicitação.
+	4. O usuário descreve o problema que está enfrentando com seu dispositivo Apple.
+	5. O usuário seleciona "Enviar Solicitação".
+	6. O sistema registra a solicitação e notifica a assistência técnica autorizada.
+
+Fluxo Alternativo:
+A. Se o usuário decide voltar antes de enviar a solicitação:
+	1. O usuário seleciona "Voltar".
+	2. O sistema retorna à tela inicial.
+
+Pós-condições: O pedido de assistência do usuário é registrado e a assistência técnica é notificada.
+
+## 3. Acompanhar Status do Reparo
+Identificador: CU003
+Nome: Acompanhar Status do Reparo
+Ator Principal: Usuário Final
+Pré-condições: O usuário deve ter uma solicitação de reparo ativa.
+Fluxo Principal:
+	1. O usuário inicia o aplicativo e faz login.
+	2. O usuário seleciona a opção "Acompanhar Reparo".
+	3. O sistema mostra os detalhes da solicitação de reparo, incluindo o status atual.
+	4. O usuário verifica as informações.
+	5. Se desejar, o usuário pode selecionar "Atualizar" para verificar se houve mudanças no status do reparo.
+
+Fluxo Alternativo:
+A. Se o reparo estiver concluído:
+	1. O sistema mostra a opção "Avaliar Serviço".
+	2. O usuário pode fornecer feedback sobre a qualidade do serviço.
+
+Pós-condições: O usuário está informado sobre o status atual de seu reparo
+
 
 ## Especificações em Matriz de rastreabilidade
 
