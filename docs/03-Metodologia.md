@@ -50,7 +50,7 @@ etiquetas:
 - `question`: indica que um problema, pull request ou discussão precisa de mais informações 
 
 <br />
-A seguir, ilustramos a execução do Gitlens da segunda etapa deste projeto.
+A seguir, ilustramos a execução do Git Graph da segunda etapa deste projeto.
 
  <div align="center">
  <img src="img/gitgraph.JPG" width="700px" />
