@@ -24,40 +24,54 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 ## Wireframes
 ### Wireframe Protótipo
 <!-- ![Exemplo de Wireframe](img/wireframe-example.png) -->
+
 Loading
+
 ![Loading Wireframe](img/iFix-Wireframe/1-Loading.png)
 
 Login
+
 ![Login Wireframe](img/iFix-Wireframe/2-Login.png)
 
 #### Usuário
+
 Criar
+
 ![Criar usuário Wireframe](img/iFix-Wireframe/3.0-Criar_usuario.png)
 
 Visualizar
-![Visualizar usuário Wireframe](img/iFix-Wireframe/3.1-_Visualizar_usuario.png)
+
+![Visualizar usuário Wireframe](img/iFix-Wireframe/3.1-Visualizar_usuario.png)
 
 Editar
-![Editar usuário Wireframe](img/iFix-Wireframe/3.2-Editar_usuario)
+
+![Editar usuário Wireframe](img/iFix-Wireframe/3.2-Editar_usuario.png)
 
 Cancelar cadastro de usuário
+
 ![Canacelar cadastro de usuario Wireframe](img/iFix-Wireframe/5-Cancelar_usuario.png)
 
 
 #### Ordem de Serviço
+
 Listar
+
 ![Listar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.0-Listar_os.png)
 
 Criar
+
 ![Criar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.1-Criar_os.png)
 
 Vizualizar
+
 ![Vizualizar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.2-Visualizar_os.png)
 
 Editar
+
 ![Editar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.3-Editar_os.png)
 
 Cancelar OS
+
 ![Cencelar cadastro de Ordem de Serviço Wireframe](img/iFix-Wireframe/6-Cancelar_os.png)
 
 ### Wireframe Telas Reais
