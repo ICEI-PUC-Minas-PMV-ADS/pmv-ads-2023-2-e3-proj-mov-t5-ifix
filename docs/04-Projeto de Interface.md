@@ -13,7 +13,8 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 
 O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
+<!-- ![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg) -->
+![Diagrama de Fluxo](img/userflow.jpg)
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
 
@@ -21,8 +22,49 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 > - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Wireframes
+### Wireframe Protótipo
+<!-- ![Exemplo de Wireframe](img/wireframe-example.png) -->
+Loading
+![Loading Wireframe](img/iFix-Wireframe/1-Loading.png)
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Login
+![Login Wireframe](img/iFix-Wireframe/2-Login.png)
+
+#### Usuário
+Criar
+![Criar usuário Wireframe](img/iFix-Wireframe/3.0-Criar_usuario.png)
+
+Visualizar
+![Visualizar usuário Wireframe](img/iFix-Wireframe/3.1-_Visualizar_usuario.png)
+
+Editar
+![Editar usuário Wireframe](img/iFix-Wireframe/3.2-Editar_usuario)
+
+Cancelar cadastro de usuário
+![Canacelar cadastro de usuario Wireframe](img/iFix-Wireframe/5-Cancelar_usuario.png)
+
+
+#### Ordem de Serviço
+Listar
+![Listar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.0-Listar_os.png)
+
+Criar
+![Criar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.1-Criar_os.png)
+
+Vizualizar
+![Vizualizar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.2-Visualizar_os.png)
+
+Editar
+![Editar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.3-Editar_os.png)
+
+Cancelar OS
+![Cencelar cadastro de Ordem de Serviço Wireframe](img/iFix-Wireframe/6-Cancelar_os.png)
+
+### Wireframe Telas Reais
+
+A imagem a seguir ilustra o wireframe com imagens das telas reais das seis primeiras telas. O arquivo será atualizado conforme desenvolvimento das demais telas.
+
+**Em construção**
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
