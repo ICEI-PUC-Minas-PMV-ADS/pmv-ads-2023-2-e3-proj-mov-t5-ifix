@@ -14,7 +14,7 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
 
 <!-- ![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg) -->
-![Diagrama de Fluxo](img/userflow.jpg)
+![Diagrama de Fluxo](img/fluxo_do_usuario.png)
 
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
 
@@ -25,54 +25,69 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas d
 ### Wireframe Protótipo
 <!-- ![Exemplo de Wireframe](img/wireframe-example.png) -->
 
-Loading
+#### 1 - Início
+1.1 - Loading
 
-![Loading Wireframe](img/iFix-Wireframe/1-Loading.png)
+![Loading Wireframe](img/iFix-Wireframe/wp01loading.png)
 
-Login
+1.2 - Login
 
-![Login Wireframe](img/iFix-Wireframe/2-Login.png)
+![Login Wireframe](img/iFix-Wireframe/wp02login.png)
 
-#### Usuário
+#### 2 - Usuário:
 
-Criar
+2.1 - Criar usuário
 
-![Criar usuário Wireframe](img/iFix-Wireframe/3.0-Criar_usuario.png)
+![Criar usuário Wireframe](img/iFix-Wireframe/wp03criarusuario.png)
 
-Visualizar
+2.2 - Editar cadastro do usuário
 
-![Visualizar usuário Wireframe](img/iFix-Wireframe/3.1-Visualizar_usuario.png)
+![Visualizar usuário Wireframe](img/iFix-Wireframe/wp04editarusuario.png)
 
-Editar
+2.3 - Visualizar cadastro do usuário
 
-![Editar usuário Wireframe](img/iFix-Wireframe/3.2-Editar_usuario.png)
+![Editar usuário Wireframe](img/iFix-Wireframe/wp05visualizarusuario.png)
 
-Cancelar cadastro de usuário
+3.4 - Cancelar cadastro de usuário
 
-![Canacelar cadastro de usuario Wireframe](img/iFix-Wireframe/5-Cancelar_usuario.png)
+![Canacelar cadastro de usuario Wireframe](img/iFix-Wireframe/wp10cancelarcadastrodeusuario.png)
 
 
-#### Ordem de Serviço
+#### 3 - Ordem de Serviço
 
-Listar
+3.1 - Listar Ordem de Serviço
 
-![Listar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.0-Listar_os.png)
+![Listar Ordem de Serviço Wireframe](img/iFix-Wireframe/wp06listaros.png)
 
-Criar
+3.2 - Criar Ordem de Serviço
 
-![Criar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.1-Criar_os.png)
+![Criar Ordem de Serviço Wireframe](img/iFix-Wireframe/wp07criaros.png)
 
-Vizualizar
+3.3 - Editar Ordem de Serviço
 
-![Vizualizar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.2-Visualizar_os.png)
+![Vizualizar Ordem de Serviço Wireframe](img/iFix-Wireframe/wp08editaros.png)
 
-Editar
+3.4 - Vizualizar Ordem de Serviço
 
-![Editar Ordem de Serviço Wireframe](img/iFix-Wireframe/4.3-Editar_os.png)
+![Editar Ordem de Serviço Wireframe](img/iFix-Wireframe/wp09visualizaros.png)
 
-Cancelar OS
+3.5 - Cancelar Ordem de Serviço
 
-![Cencelar cadastro de Ordem de Serviço Wireframe](img/iFix-Wireframe/6-Cancelar_os.png)
+![Cencelar cadastro de Ordem de Serviço Wireframe](img/iFix-Wireframe/wp11cancelandoos.png)
+
+#### 4 - Status: Autorização de Ordem de Serviço
+
+4.1 - Status da Ordem de Serviço
+
+![Status da Ordem de Serviço](img/iFix-Wireframe/wp12statusdoreparo.png)
+
+4.2 - Usuário Autoriza Orçamento
+
+![Autorização](img/iFix-Wireframe/wp13autorizaros.png)
+
+4.3 - Usuário Nega Orçamento
+
+![Não autoriza](img/iFix-Wireframe/wp14negarautorizacaoos.png)
 
 ### Wireframe Telas Reais
 
