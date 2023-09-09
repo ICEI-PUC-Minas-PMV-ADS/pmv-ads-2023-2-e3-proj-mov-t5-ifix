@@ -26,7 +26,44 @@ A partir da compreensão do dia a dia das personas identificadas para o projeto,
 | Técnico Certificado Apple | acessar manuais de reparo detalhados para produtos Apple         | executar reparos com mais eficácia e precisão.                             |
 | Estudante Universitário   | agendar reparos rápidos para o meu MacBook                       | evitar interrupções em minhas atividades acadêmicas e continuar produtivo. |
 | Cliente Fiel Apple        | receber notificações sobre o status do reparo do meu dispositivo | ficar atualizado sobre o progresso e estimativas de conclusão.             ||
-| Usuário Empresarial       | um canal eficiente para agendar reparos                          | minimizar a interrupção nas atividades comerciais                       
+| Usuário Empresarial       | um canal eficiente para agendar reparos                          | minimizar a interrupção nas atividades comerciais    
+
+## Modelagem do Processo de Negócio
+## Análise da Situação Atual
+
+Mesmo com o avanço da tecnologia, o processo de reparo de aparelhos eletrônicos em assistência é muito burocrático e o cliente não têm acesso a informação sobre o andamento do serviço contratado, o que faz com que o cliente fique frustrado por ter que ficar ligando para a empresa várias vezes. 
+
+![](img/modelo_atual.png)
+
+## Análise do Ambiente Externo
+
+Entretanto, é necessário considerar alguns dificultadores que podem inviabilizar a elaboração e a aplicação da proposta supracitada. A restrição no prazo de planejamento e elaboração da aplicação móvel, bem como o curto período de testes, pode ocasionar imprecisão na aplicabilidade e utilização do software. O mercado de aplicativos é dinâmico e muito amplo, sendo assim, é importante atentar-se para as plataformas existentes que oferecem propostas similares. 
+
+## Descrição Geral da Proposta da Situação Futura
+
+Considerando o contexto elucidado nas seções anteriores, vários são os problemas existente que viabilizam a criação e a aplicação móvel IFIX, tais como dificuldade dos proprietários de aparelhos apple de acompanhar os status de reparo do seu aparelho e a transparência no processo. 
+
+Programar uma aplicação móvel  em que o usuário/proprietário possa desfrutar da tecnologia em prol de si e vai proporcionar um conforto e satisfação ao usuário. 
+
+O IFIX oferece serviços que informam ao cliente o melhor horário para ir a empresa e quando o reparo estiver pronto .  De modo geral, é necessário a empresa se planejar para saber a demanda que poderá atender em um mesmo horário. 
+![](img/modelo_ifix.png)
+
+## Relação entre Potencialidades e Oportunidades de Melhoria para o Processo de Negócio
+
+Para Broke e Rosemann (2013), a gestão baseada em processos de negócio (BPM) tem uma aborgagem centrada em processos para gerar melhorias consideráveis no desempenho, compatibilidade de ums sistema, além de ter o poder de inovar e transformar continuamente os negócios. Segundo eles, as melhorias e ajustes advém após os serviços serem testados e, estes cenários devem ser desenvolvidos para identificar qualquer possibilidade de composição e consolidação dos serviços, detalhando as operações através de processos iterativos e incrementais.
+
+Segundo Araújo, Garcia e Martines (2017), a Tecnologia da Informação possui implicações importantes para a formação da arquitetura de processos pois as informações  processo de negócio.
+
+Ao realizar algumas pesquisas de campo em algumas assistências e a alguns clientes, acabamos percebendo que havia uma oportunidade em melhorar a qualidade das informações coletadas e também dos serviços prestados. A melhoria de um processo normalmente ocorre mediante a necessidade de prevenção ou correção de problemas que poderão acontecer ou aconteceram no andamento do processo. A percepção de uma necessidade de melhoria de processo, para correção de problema existente ou para prevenção de um problema, vista com olhos da gestão da qualidade, denomina-se oportunidade de melhoria. Toda a oportunidade de melhoria poderá ser tratada através de um plano de ação preventivo ou corretivo.
+
+As informações coletadas mostrou-nos que teríamos uma oportunidade de melhoria para o processo de negócio, desenvolvendo  uma platafroma móvel em que ficassem armazenadas o historico do aparelho, assim facilitando para a assintência os serviços ja realizados, e para o cliente ter a comprovação do serviço e assim ter a garantia do aparelho.
+
+Ao retornar a informação aos propritários das assistências, eles infomaram-nos que a proposta de negócio seria muito aceita por que as informções realizadas em clientes antigos ficariam armazenadas e seriam de fácil consulta, melhorando ainda mais o atendimento dos clientes .
+
+Com isso, pode-se dizer que gerenciar os processos de negócio de uma organização é mudar continuamente a forma como essa organização realiza suas atividades  com o objetivo de obter melhorias de desempenho significativas, como fortalecimento da excelência operacional e inovação contínua do produto.
+
+
+
 
 ## Indicadores de Desempenho
 
@@ -38,7 +75,7 @@ Os indicadores estabelecidos para a avaliação do desempenho do aplicativo do A
 |02| Usuários cadastrados       | Mensurar a quantidade de cadastros efetuados no aplicativo  | Avaliar a taxa de cadastros realizados no aplicativo após download | nº de cadastro/período | Banco de Dados | Crescimento e Aprendizado | Chegar próximo à quantidade de downloadas efetuadas | Mensal |
 |03| Download      | Acompanhar crescimento do aplicativo  | Avaliar a taxa de downloads na Play Store e Apple Store | nº de downloads/período | Play Store e Apple Store  | Aumentar nº de usuários | Crescimento e Aprendizado| Mensal |
 |04| Reclamações    | Verificar as reclamações recebidas  | Verificar o índice de reclamações recebidas com relação ao app e respondê-las| nº de reclamações/downloads | Play Store e Apple Store  | Qualidade do Produto | índice 0% de reclamação| Mensal |
-|05| Net Promoter Score | Satisfação dos usuários em relação ao app  | Medir a satisfação dos clientes | Diferença dos clientes promotores pelos detratores  | pergunta aos clientes que usam o app   | Melhoria contínua | Qualidade do produto| Semestral |
+|05| Net Promoter Score | Satisfação dos usuários em relação ao app  | Medir a satisfação dos clientes | Diferença dos clientes promotores pelos detratores  | Pergunta objetiva de recomendação do app   | Melhoria contínua | Entre 75 e 100 | Semestral |
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicamos uma técnica de priorização de requisitos e detalhamos, em sequência, como a técnica foi aplicada.
