@@ -26,7 +26,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 ## Modelo Físico
 
-Entregar um arquivo banco.sql contendo os scripts de criação das tabelas do banco de dados. Este arquivo deverá ser incluído dentro da pasta src\bd.
+O Firebase Realtime Database é um banco de dados NoSQL hospedado na nuvem e não requer scripts de criação de banco de dados como em sistemas de gerenciamento de banco de dados SQL tradicionais. Em vez disso, você define a estrutura de seus dados diretamente por meio do código do aplicativo ou usando a interface do Firebase Console.
 
 ## Tecnologias Utilizadas
 
