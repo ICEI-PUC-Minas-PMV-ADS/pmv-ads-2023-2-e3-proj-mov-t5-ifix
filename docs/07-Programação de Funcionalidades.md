@@ -1,6 +1,6 @@
 # Programação de Funcionalidades
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="5-Arquitetura da Solução.md"> Arquitetura da Solução</a>
+<span style="color:red">Pré-requisitos: <a href="../docs/02-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="../docs/04-Projeto de Interface.md"> Projeto de Interface</a>, <a href="../docs/03-Metodologia.md"> Metodologia</a>, <a href="../docs/05-Arquitetura da Solução.md"> Arquitetura da Solução</a>
 
 Implementação do sistema descritas por meio dos requisitos funcionais e/ou não funcionais. Deve relacionar os requisitos atendidos os artefatos criados (código fonte) além das estruturas de dados utilizadas e as instruções para acesso e verificação da implementação que deve estar funcional no ambiente de hospedagem.
 
@@ -40,10 +40,12 @@ Responsável por implementar implementar o crud e também foi responsável pelo 
 
 **Don**
 Responsável por implementar o crud também e o Banco de dados no sistema Também foi responsável pelo desenvolvimento das rotas da aplicação e de alguns componentes, como os botões e o navbar.
+
 ![iFix](../docs/img/iFix-Wireframe/wp01loading.png ) ![iFix](../docs/img/iFix-Wireframe/wp07criaros.png) ![iFix](../docs/img/iFix-Wireframe/wp06listaros.png )
 
 **Gustavo**
-Responsável por implementar
+Responsável por implementar o crud, listar e também implementar alguns componentes
+
 ![iFix](../docs/img/iFix-Wireframe/wp12statusdoreparo.png) ![iFix](../docs/img/iFix-Wireframe/wp13autorizaros.png) ![iFix](../docs/img/iFix-Wireframe/wp14negarautorizacaoos.png) ![iFix](../docs/img/iFix-Wireframe/wp01loading.png)
 
 
