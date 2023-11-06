@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import login from './screens/login';
 import os from './screens/os';
 import AgendaOs from './screens/agendaOs';
+import createUser from './screens/createUser';
 
 const Stack = createNativeStackNavigator();
 
