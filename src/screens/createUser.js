@@ -6,6 +6,7 @@ import { ActivityIndicator } from "react-native";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { Headline, TextInput, Button } from 'react-native-paper';
 import { addDoc, collection } from "firebase/firestore";
+import axios from "axios";
 
 const CreateUser = ({ navigation }) => {
 
@@ -13,26 +14,57 @@ const CreateUser = ({ navigation }) => {
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState();
+  const [cep, setCep] = useState();
   const [address, setAddress] = useState();
+  const [neighborhood, setneighborhood] = useState();
+  const [city, setCity] = useState();
+  const [uf, setUf] = useState();
+  const [addressNumber, setAddressNumber] = useState();
 
   const auth = firebaseAuth;
 
   const createUser = async () => {
     setLoading(true);
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-
-      await addDoc(collection(db, 'users'), { email, name, address })
-
+      await createUserWithEmailAndPassword(auth, email, password);
+      await addDoc(collection(db, 'users'), 
+      { 
+        email, 
+        name, 
+        address, 
+        neighborhood, 
+        city, 
+        uf, 
+        addressNumber 
+      });
       alert(`${name} você foi cadastrado com sucesso!`);
 
       navigation.navigate('Login');
 
     } catch (err) {
+      alert(`Não foi possivel efetuar o cadastro`);
       console.log(err)
     } finally {
       setLoading(false)
     }
+  }
+
+
+  const checkCep = async () => {
+    try {
+      const response = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
+      const data = response.data;
+      console.log(data)
+
+      setAddress(data.logradouro || ''); 
+      setneighborhood(data.bairro || ''); 
+      setCity(data.localidade || ''); 
+      setUf(data.uf || ''); 
+
+    } catch (error) {
+      console.error('Erro ao consultar o CEP:', error);
+    }
+
   }
 
 
@@ -81,10 +113,56 @@ const CreateUser = ({ navigation }) => {
 
       <TextInput
         style={styles.input}
+        value={cep}
+        placeholder="Cep"
+        autoCapitalize="none"
+        onChangeText={(text) => setCep(text)}
+        onBlur={checkCep}
+        left={<TextInput.Icon name="home-account" color={"#000"} />}
+        mode="contained"
+      />
+      <TextInput
+        style={styles.input}
         value={address}
         placeholder="Address"
         autoCapitalize="none"
         onChangeText={(text) => setAddress(text)}
+        left={<TextInput.Icon name="home-account" color={"#000"} />}
+        mode="contained"
+      />
+      <TextInput
+        style={styles.input}
+        value={uf}
+        placeholder="uf"
+        autoCapitalize="none"
+        onChangeText={(text) => setUf(text)}
+        left={<TextInput.Icon name="home-account" color={"#000"} />}
+        mode="contained"
+      />
+      <TextInput
+        style={styles.input}
+        value={city}
+        placeholder="city"
+        autoCapitalize="none"
+        onChangeText={(text) => setCity(text)}
+        left={<TextInput.Icon name="home-account" color={"#000"} />}
+        mode="contained"
+      />
+        <TextInput
+        style={styles.input}
+        value={neighborhood}
+        placeholder="neighborhood"
+        autoCapitalize="none"
+        onChangeText={(text) => setNeighborhood(text)}
+        left={<TextInput.Icon name="home-account" color={"#000"} />}
+        mode="contained"
+      />
+      <TextInput
+        style={styles.input}
+        value={addressNumber}
+        placeholder="addressNumber"
+        autoCapitalize="none"
+        onChangeText={(text) => setAddressNumber(text)}
         left={<TextInput.Icon name="home-account" color={"#000"} />}
         mode="contained"
       />
