@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 import Calendario from "../components/calendario";
 
-const ScheduleOrderService = () => {
+const ScheduleOrderService = ({ navigation }) => {
 
-    const [value, onChangeText] = React.useState('Descrição do problema');
+    const [value, onChangeText] = React.useState('');
 
     return (
         <View style={styles.container}>
@@ -68,6 +68,7 @@ const ScheduleOrderService = () => {
                 maxLength={400}
                 onChangeText={text => onChangeText(text)}
                 value={value}
+                placeholder="Descrição do Problema"
                 style={{
                     padding: 10,
                     borderColor: 'gray',
