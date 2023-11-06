@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
-import Calendario from "../components/calendario";
+import Status from "../components/status";
 
-const AgendaOs = () => {
+const OrderService = () => {
 
-    const [value, onChangeText] = React.useState('Descrição do problema');
+    const [value, onChangeText] = React.useState('Descrição do serviço a ser executado');
 
     return (
         <View style={styles.container}>
             <Text style={styles.titulo}>
-                Agendamento de Serviço
+                Orçamento de Serviço
             </Text>
-            
-           
+            <Text style={styles.label}>Status</Text>
+            <Status />
             <View
                 style={{
                     flexDirection: 'row',
@@ -49,7 +49,7 @@ const AgendaOs = () => {
                             fontSize:18
 
                         }}
-                        defaultValue="Informe seu dispositivo"
+                        defaultValue="Macbook Pro 2015"
 
                     />
                 </View>
@@ -57,10 +57,20 @@ const AgendaOs = () => {
 
             </View>
 
-            <Text style={styles.label}>Data</Text>
-            <Calendario />
-         
-            <Text style={styles.label}>Descrição do Problema</Text>
+            <Text style={styles.label}>Valor do reparo</Text>
+            <TextInput
+                style={{
+                    height: 40,
+                    borderColor: 'gray',
+                    borderWidth: 1,
+                    margin: 10,
+                    textAlign: 'center',
+                    fontSize: 18
+                }}
+                defaultValue="R$ 1.500,00"
+
+            />
+            <Text style={styles.label}>Descrição do Serviço</Text>
             <TextInput
                 editable
                 multiline={true}
@@ -79,13 +89,13 @@ const AgendaOs = () => {
                 }}
             />
             <Button
-                title="Salvar"
+                title="Autorizar"
                 onPress={() => console.log('Autorizado')}
                 color={'green'}
             />
 
             <Button
-                title="Cancelar"
+                title="Recusar"
                 onPress={() => console.log('Recusado')}
                 color={'red'}
             />
@@ -124,4 +134,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default AgendaOs
+export default OrderService;

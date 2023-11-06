@@ -1,12 +1,13 @@
 
-import React ,{ useState } from "react"
+import React, { useState } from "react"
 import { StyleSheet, Text, View, Image } from "react-native";
 import { firebaseAuth } from "../external/infra/fireBaseConfig";
 import { ActivityIndicator } from "react-native";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { Headline, TextInput, Button } from 'react-native-paper';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-const Login = () => {
+const Login = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
@@ -18,7 +19,7 @@ const Login = () => {
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
       console.log(response)
-    } catch(err) {
+    } catch (err) {
       console.log(err)
     } finally {
       setLoading(false)
@@ -26,17 +27,6 @@ const Login = () => {
   }
 
 
-  const signUp = async () => {
-    setLoading(true);
-    try {
-      const response = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(response)
-    } catch(err) {
-      console.log(err)
-    } finally {
-      setLoading(false)
-    }
-  }
 
   return (
     <View style={styles.container}>
@@ -49,18 +39,18 @@ const Login = () => {
         <Headline style={styles.textHeader} >Technical Suport for Apple products</Headline>
       </View>
 
-        <TextInput
+      <TextInput
         style={styles.input}
         value={email}
         placeholder="Email"
         autoCapitalize="none"
         onChangeText={(text) => setEmail(text)}
-        left={<TextInput.Icon name="account"  color={"#000"} />}
+        left={<TextInput.Icon name="account" color={"#000"} />}
         keyboardType='email-address'
         mode="contained"
-        />
+      />
 
-        <TextInput
+      <TextInput
         style={styles.input}
         value={password}
         placeholder="Password"
@@ -69,21 +59,21 @@ const Login = () => {
         onChangeText={(text) => setPassword(text)}
         left={<TextInput.Icon name="key" color={"#000"} />}
         mode="contained"
-        />
+      />
 
       <View style={styles.container}>
         {
-        loading  ? <ActivityIndicator size="large" color='#0000ff'/>
-        : (
-        <>
-          <Button title="Logins" onPress={signIn} style={styles.buttonLogin} mode="contained">
-            Login
-          </Button>
-          <Button title="create account" onPress={signUp} style={styles.buttonCreate} mode="contained">
-            Create Account
-          </Button>
-        </>
-        )}
+          loading ? <ActivityIndicator size="large" color='#0000ff' />
+            : (
+              <>
+                <Button title="Logins" onPress={signIn} style={styles.buttonLogin} mode="contained">
+                  Login
+                </Button>
+                <Button title="create account" onPress={() => navigation.navigate('Create account')} style={styles.buttonCreate} mode="contained">
+                  Create Account
+                </Button>
+              </>
+            )}
       </View>
     </View>
   )
