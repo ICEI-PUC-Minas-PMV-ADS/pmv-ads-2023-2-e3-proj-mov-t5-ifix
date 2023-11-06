@@ -4,7 +4,7 @@ import Status from "../components/status";
 
 const OrderService = () => {
 
-    const [value, onChangeText] = React.useState('Descrição do serviço a ser executado');
+    const [value, onChangeText] = React.useState('');
 
     return (
         <View style={styles.container}>
@@ -31,7 +31,7 @@ const OrderService = () => {
                             width: 100,
                             fontSize:18
                         }}
-                        defaultValue="00001"
+                        placeholder="00001"
 
                     />
                 </View>
@@ -49,7 +49,7 @@ const OrderService = () => {
                             fontSize:18
 
                         }}
-                        defaultValue="Macbook Pro 2015"
+                        placeholder="Macbook Pro 2015"
 
                     />
                 </View>
@@ -67,7 +67,7 @@ const OrderService = () => {
                     textAlign: 'center',
                     fontSize: 18
                 }}
-                defaultValue="R$ 1.500,00"
+                placeholder="R$ 1.500,00"
 
             />
             <Text style={styles.label}>Descrição do Serviço</Text>
@@ -77,6 +77,7 @@ const OrderService = () => {
                 numberOfLines={5}
                 maxLength={400}
                 onChangeText={text => onChangeText(text)}
+                placeholder="Descrição do serviço a ser executado"
                 value={value}
                 style={{
                     padding: 10,
@@ -110,6 +111,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         backgroundColor: '#ecf0f1',
         padding: 8,
+        flex: 2
         
     },
     titulo:{

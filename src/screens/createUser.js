@@ -75,8 +75,6 @@ const CreateUser = ({ navigation }) => {
         <View style={styles.header}>
           <Image style={styles.image} source={require('../assets/logo.png')} />
         </View>
-
-        <Headline style={styles.textHeader}>Register</Headline>
       </View>
     <ScrollView style={styles.scroll}>
       <TextInput
@@ -176,7 +174,7 @@ const CreateUser = ({ navigation }) => {
                   Save
                 </Button>
                 <Button title="Cancel" onPress={navigation.goBack} style={styles.buttonCancel} mode="contained">
-                  CANCEL
+                  Cancel
                 </Button>
               </>
             )}
@@ -191,7 +189,7 @@ export default CreateUser;
 
 const styles = StyleSheet.create({
   scroll: {
-    height: '39%',
+    height: '37%',
   },
   container: {
     flex: 3,
