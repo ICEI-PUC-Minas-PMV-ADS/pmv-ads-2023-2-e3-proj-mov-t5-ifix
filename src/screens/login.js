@@ -1,9 +1,10 @@
 
 import React ,{ useState } from "react"
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import { StyleSheet, Text, View, Image } from "react-native";
 import { firebaseAuth } from "../external/infra/fireBaseConfig";
 import { ActivityIndicator } from "react-native";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { Headline, TextInput, Button } from 'react-native-paper';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -40,31 +41,50 @@ const Login = () => {
   return (
     <View style={styles.container}>
 
-      <TextInput 
-      style={styles.input} 
-      value={email}
-      placeholder="Email" 
-      autoCapitalize="none"
-      onChangeText={(text) => setEmail(text)}
-      />
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Image style={styles.image} source={require('../assets/logo.png')} />
+        </View>
 
-      <TextInput 
-      style={styles.input} 
-      value={password}
-      placeholder="Password" 
-      autoCapitalize="none"
-      secureTextEntry={true}
-      onChangeText={(text) => setPassword(text)}
-      />
+        <Headline style={styles.textHeader} >Technical Suport for Apple products</Headline>
+      </View>
 
-      {
-      loading  ? <ActivityIndicator size="large" color='#0000ff'/>
-      : (
-      <>
-        <Button title="Logins" onPress={signIn}/>
-        <Button title="create account" onPress={signUp}/>
-      </>
-      )}
+        <TextInput
+        style={styles.input}
+        value={email}
+        placeholder="Email"
+        autoCapitalize="none"
+        onChangeText={(text) => setEmail(text)}
+        left={<TextInput.Icon name="account"  color={"#000"} />}
+        keyboardType='email-address'
+        mode="contained"
+        />
+
+        <TextInput
+        style={styles.input}
+        value={password}
+        placeholder="Password"
+        autoCapitalize="none"
+        secureTextEntry={true}
+        onChangeText={(text) => setPassword(text)}
+        left={<TextInput.Icon name="key" color={"#000"} />}
+        mode="contained"
+        />
+
+      <View style={styles.container}>
+        {
+        loading  ? <ActivityIndicator size="large" color='#0000ff'/>
+        : (
+        <>
+          <Button title="Logins" onPress={signIn} style={styles.buttonLogin} mode="contained">
+            Login
+          </Button>
+          <Button title="create account" onPress={signUp} style={styles.buttonCreate} mode="contained">
+            Create Account
+          </Button>
+        </>
+        )}
+      </View>
     </View>
   )
 }
@@ -73,16 +93,42 @@ export default Login;
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal:20,
-    flex:1,
+    flex: 1,
+    margin: 10,
     justifyContent: 'center'
   },
+
+  header: {
+    alignItems: 'center',
+    marginTop: 30,
+    marginBottom: 12
+  },
+
+  image: {
+    width: 128,
+    height: 128,
+    borderRadius: 30
+  },
+
+  textHeader: {
+    textAlign: 'center'
+  },
+
   input: {
     marginVertical: 4,
-    height:50,
-    borderWidth:1,
-    borderRadius:4,
-    padding:10,
+    height: 50,
+    borderRadius: 4,
     backgroundColor: '#fff'
-  }
+  },
+
+  buttonLogin: {
+    marginBottom: 10,
+    borderRadius: 4,
+    backgroundColor: "#bbb"
+  },
+
+  buttonCreate: {
+    borderRadius: 4,
+    backgroundColor: 'green',
+  },
 })

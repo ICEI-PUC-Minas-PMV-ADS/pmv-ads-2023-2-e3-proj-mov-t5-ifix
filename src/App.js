@@ -11,7 +11,7 @@ export default function App() {
     <NavigationContainer>
       {/*Voltar para login*/}
       <Stack.Navigator initialRouteName='Login'>
-      <Stack.Screen name='Login' component={AgendaOs} options={{headerShown:false}}/>
+      <Stack.Screen name='Login' component={login} options={{headerShown:false}}/>
         {/* <Stack.Screen name='login' component={login} options={{headerShown:false}}/> */}
       </Stack.Navigator>
     </NavigationContainer>
