@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
   buttonLogin: {
     marginBottom: 10,
     borderRadius: 4,
-    backgroundColor: "#bbb"
+    backgroundColor: "blue"
   },
 
   buttonCreate: {

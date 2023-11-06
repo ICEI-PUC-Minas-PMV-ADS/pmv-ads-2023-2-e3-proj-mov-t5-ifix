@@ -1,6 +1,6 @@
 
 import React, { useState } from "react"
-import { StyleSheet, Text, View, Image, Alert } from "react-native";
+import { StyleSheet, Text, View, Image, Alert, ScrollView } from "react-native";
 import { firebaseAuth, db } from "../external/infra/fireBaseConfig";
 import { ActivityIndicator } from "react-native";
 import { createUserWithEmailAndPassword } from "firebase/auth";
@@ -78,7 +78,7 @@ const CreateUser = ({ navigation }) => {
 
         <Headline style={styles.textHeader}>Register</Headline>
       </View>
-
+    <ScrollView style={styles.scroll}>
       <TextInput
         style={styles.input}
         value={email}
@@ -166,7 +166,7 @@ const CreateUser = ({ navigation }) => {
         left={<TextInput.Icon name="home-account" color={"#000"} />}
         mode="contained"
       />
-
+    </ScrollView>
       <View style={styles.container}>
         {
           loading ? <ActivityIndicator size="large" color='#0000ff' />
@@ -181,16 +181,22 @@ const CreateUser = ({ navigation }) => {
               </>
             )}
       </View>
+      
     </View>
+    
   )
 }
 
 export default CreateUser;
 
 const styles = StyleSheet.create({
+  scroll: {
+    height: '39%',
+  },
   container: {
-    flex: 1,
-    margin: 10,
+    flex: 3,
+    margin: 8,
+    padding: 11,
     justifyContent: 'center'
   },
 
@@ -213,8 +219,9 @@ const styles = StyleSheet.create({
   input: {
     marginVertical: 4,
     height: 50,
-    borderRadius: 4,
-    backgroundColor: '#fff'
+    borderRadius: 10,
+    backgroundColor: '#fff',
+    flex: 1,
   },
 
   button: {
