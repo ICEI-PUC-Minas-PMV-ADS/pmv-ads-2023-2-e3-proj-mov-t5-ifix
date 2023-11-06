@@ -1,6 +1,6 @@
 
 import React ,{ useState } from "react"
-import { Button, StyleSheet, Text, TextInput, View } from "react-native";
+import { Button, StyleSheet, Text, TextInput, View, Image } from "react-native";
 import { firebaseAuth } from "../external/infra/fireBaseConfig";
 import { ActivityIndicator } from "react-native";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
@@ -53,7 +53,7 @@ const Login = () => {
         placeholder="Email"
         autoCapitalize="none"
         onChangeText={(text) => setEmail(text)}
-        left={<TextInput.Icon name="account"
+        left={<TextInput.Icon name="account" />}
         />
 
         <TextInput
