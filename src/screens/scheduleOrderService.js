@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
-import Status from "../components/status";
+import Calendario from "../components/calendario";
 
-const Os = () => {
+const ScheduleOrderService = () => {
 
-    const [value, onChangeText] = React.useState('Descrição do serviço a ser executado');
+    const [value, onChangeText] = React.useState('Descrição do problema');
 
     return (
         <View style={styles.container}>
             <Text style={styles.titulo}>
-                Orçamento de Serviço
+                Agendamento de Serviço
             </Text>
-            <Text style={styles.label}>Status</Text>
-            <Status />
+            
+           
             <View
                 style={{
                     flexDirection: 'row',
@@ -49,7 +49,7 @@ const Os = () => {
                             fontSize:18
 
                         }}
-                        defaultValue="Macbook Pro 2015"
+                        defaultValue="Informe seu dispositivo"
 
                     />
                 </View>
@@ -57,20 +57,10 @@ const Os = () => {
 
             </View>
 
-            <Text style={styles.label}>Valor do reparo</Text>
-            <TextInput
-                style={{
-                    height: 40,
-                    borderColor: 'gray',
-                    borderWidth: 1,
-                    margin: 10,
-                    textAlign: 'center',
-                    fontSize: 18
-                }}
-                defaultValue="R$ 1.500,00"
-
-            />
-            <Text style={styles.label}>Descrição do Serviço</Text>
+            <Text style={styles.label}>Data</Text>
+            <Calendario />
+         
+            <Text style={styles.label}>Descrição do Problema</Text>
             <TextInput
                 editable
                 multiline={true}
@@ -89,13 +79,13 @@ const Os = () => {
                 }}
             />
             <Button
-                title="Autorizar"
+                title="Salvar"
                 onPress={() => console.log('Autorizado')}
                 color={'green'}
             />
 
             <Button
-                title="Recusar"
+                title="Cancelar"
                 onPress={() => console.log('Recusado')}
                 color={'red'}
             />
@@ -134,4 +124,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Os
+export default ScheduleOrderService;
