@@ -8,9 +8,7 @@ const ScheduleOrderService = ({ navigation }) => {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.titulo}>
-                Agendamento de Serviço
-            </Text>
+           
             
            
             <View
@@ -19,22 +17,7 @@ const ScheduleOrderService = ({ navigation }) => {
                     justifyContent: 'space-between',
                     
                 }}>
-                <View >
-                    <Text style={styles.label}>O.S.</Text>
-                    <TextInput
-                        style={{
-                            height: 40,
-                            borderColor: 'gray',
-                            borderWidth: 1,
-                            margin: 10,
-                            textAlign: 'center',
-                            width: 100,
-                            fontSize:18
-                        }}
-                        defaultValue="00001"
-
-                    />
-                </View>
+                
                 <View>
 
                     <Text style={styles.label}>Dispositivo</Text>
