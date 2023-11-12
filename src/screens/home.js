@@ -27,7 +27,7 @@ const Home = ({ navigation }) => {
 
             </View>
             <View style={styles.itemRow}>
-            <HomeButton cor='blue' text='Clientes' iconName={'account'} route={() => navigation.navigate('Create account')}/>
+            <HomeButton cor='blue' text='Clientes' iconName={'account'} route={() => navigation.navigate('Clientes')}/>
             <HomeButton cor='blue' text='Sair' iconName={'exit-run'} route={() => navigation.navigate('Login')}/>
 
             </View>
