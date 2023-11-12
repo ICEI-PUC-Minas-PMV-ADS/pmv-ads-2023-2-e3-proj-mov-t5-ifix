@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { Icon } from 'react-native-paper';
 
 
-const HomeButton = ({text, iconName, route}) => {
+const HomeButton = ({text, iconName, route, cor}) => {
 
     return (
 
@@ -11,7 +11,7 @@ const HomeButton = ({text, iconName, route}) => {
 
 
         <TouchableOpacity style={styles.touchableOpacity} onPress={route}>
-            <View style={styles.buttonContainer}>
+            <View style={[styles.buttonContainer, {backgroundColor: cor || 'green' }]}>
                 <Text style={styles.buttonText}>{text}</Text>
                 <Icon
                     source={iconName}
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     buttonContainer: {
         width: 150,
         height: 150,
-        backgroundColor: 'green',
+        
         justifyContent: 'center',
         alignItems: 'center',
         borderRadius: 10,

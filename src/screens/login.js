@@ -19,7 +19,7 @@ const Login = ({ navigation }) => {
     try {
       const response = await signInWithEmailAndPassword(auth, email, password);
       console.log(response)
-      navigation.navigate('HomeClient');
+      navigation.navigate('Home');
     } catch (err) {
       console.log(err)
     } finally {
