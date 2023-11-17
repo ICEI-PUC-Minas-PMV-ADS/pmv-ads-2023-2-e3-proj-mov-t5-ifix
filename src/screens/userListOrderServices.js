@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import { Image, View, FlatList, StyleSheet } from "react-native";
-import { List, Text, Searchbar } from 'react-native-paper';
+import { List, Text, Searchbar, IconButton } from 'react-native-paper';
+import { useNavigation } from '@react-navigation/native';
+
+
 
 const serviceOrderList = [
     {
         id:1,
         device: 'iPhone 12',
         description: 'Tela quebrada',
-        status: 'Em andamento',
-        client: 'José',
+        status: 'Finalizado',
+        client: 'Normandes',
         technician: 'Maria',
         estimatedValue: 'R$ 700,00'
     },
@@ -16,8 +19,8 @@ const serviceOrderList = [
         id:2,
         device: 'MacBook Pro',
         description: 'Não liga',
-        status: 'Aguardando Autorização',
-        client: 'João',
+        status: 'Finalizado',
+        client: 'Normandes',
         technician: 'Maria',
         estimatedValue: 'R$ 1.000,00'
     },
@@ -25,15 +28,29 @@ const serviceOrderList = [
         id:3,
         device: 'iPhone 11',
         description: 'Bateria viciada',
-        status: 'Pronto para retirada',
+        status: 'Finalizado',
         client: 'Normandes',
         technician: 'Maria',
         estimatedValue: 'R$ 600,00'
+    },
+    {
+        id:4,
+        device: 'iPhone 8',
+        description: 'Não carrega',
+        status: 'Pronto para retirada',
+        client: 'Normandes',
+        technician: 'Maria',
+        estimatedValue: 'R$ 300,00'
     }
 ];
 
 const UserListOrderServices = ({ navigation }) => {
     const [searchQuery, setSearchQuery] = useState('');
+    
+    const handleGoHome = () => {
+        //useNavigation.navigate('Home');
+        console.log('teste_goHome');
+    };
 
     const filteredServiceOrders = serviceOrderList.filter((serviceOrder) =>
         serviceOrder.device.toLowerCase().includes(searchQuery.toLowerCase())
@@ -42,7 +59,7 @@ const UserListOrderServices = ({ navigation }) => {
     const renderItem = ({ item }) => (
         <List.Item
             title={item.device}
-            description={item.description}
+            description={`Status: ${item.status}`}
             onPress={() => navigation.navigate('Perfil', { serviceOrder: item })}
         />
     );
@@ -52,11 +69,17 @@ const UserListOrderServices = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.titulo}>Lista de Serviços</Text>
+            <IconButton
+                icon="arrow-left"
+                size={20}
+                onPress={handleGoHome}
+                style={styles.icon}
+            />
+                <Text style={styles.titulo}>Service Order List </Text>
                 <Image style={styles.logo} source={require('../assets/logo.png')} />
             </View>
             <Searchbar
-                placeholder="Pesquisar"
+                placeholder="Search service order by ID"
                 onChangeText={onChangeSearch}
                 value={searchQuery}
             />
@@ -79,18 +102,20 @@ const styles = StyleSheet.create({
     },
     header: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
+    },
+    icon: {
+        margin: 10,
     },
     titulo: {
         flex: 1,
         fontSize: 24,
         fontWeight: 'bold',
         textAlign: 'center',
-        margin: 10,
     },
     logo: {
         width: 50,
         height: 50,
+        margin: 10,
     },
 });
