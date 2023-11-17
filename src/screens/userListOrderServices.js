@@ -1,8 +1,6 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 import { Image, View, FlatList, StyleSheet } from "react-native";
-import firebase from 'firebase/app';
-import { List, Text, TextInput, Searchbar, Icon } from 'react-native-paper';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { List, Text, Searchbar } from 'react-native-paper';
 
 const serviceOrderList = [
     {
@@ -32,47 +30,42 @@ const serviceOrderList = [
         technician: 'Maria',
         estimatedValue: 'R$ 600,00'
     }
-]
+];
 
-const UserListOrderServices =({navigation}) => {
-    const [serviceOrders, setServiceOrders] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
+const UserListOrderServices = ({ navigation }) => {
+    const [searchQuery, setSearchQuery] = useState('');
 
-    const filteredServiceOrders = serviceOrders.filter((serviceOrder) =>
-        serviceOrder.device.toLowerCase().includes(searchTerm.toLowerCase())
+    const filteredServiceOrders = serviceOrderList.filter((serviceOrder) =>
+        serviceOrder.device.toLowerCase().includes(searchQuery.toLowerCase())
     );
 
     const renderItem = ({ item }) => (
         <List.Item
-            left={props => <Text{...props}>{item.device}</Text>}
-            title={''}
+            title={item.device}
+            description={item.description}
             onPress={() => navigation.navigate('Perfil', { serviceOrder: item })}
         />
     );
 
-
-    const [searchQuery, setSearchQuery] = React.useState('');
     const onChangeSearch = query => setSearchQuery(query);
 
     return (
-    <View style={styles.container}>
-
-    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-        <Searchbar
-            placeholder="#ID Number or Device"
-            onChangeText={onChangeSearch}
-            value={searchQuery}
-            style={{ flex: 1 }} // This makes the Searchbar take up the remaining space
-        />
-        <Image style={{ width: 50, height: 50 }} source={require('../assets/logo.png')} />
-    </View>
-
-        <FlatList
-            data={serviceOrderList}
-            keyExtractor={(item) => item.id}
-            renderItem={renderItem}
-        />
-    </View>
+        <View style={styles.container}>
+            <View style={styles.header}>
+                <Text style={styles.titulo}>Lista de Serviços</Text>
+                <Image style={styles.logo} source={require('../assets/logo.png')} />
+            </View>
+            <Searchbar
+                placeholder="Pesquisar"
+                onChangeText={onChangeSearch}
+                value={searchQuery}
+            />
+            <FlatList
+                data={filteredServiceOrders}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={renderItem}
+            />
+        </View>
     );
 };
 
@@ -84,7 +77,20 @@ const styles = StyleSheet.create({
         backgroundColor: '#f0f0f0',
         marginTop: 20,
     },
+    header: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+    },
+    titulo: {
+        flex: 1,
+        fontSize: 24,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        margin: 10,
+    },
     logo: {
-        
+        width: 50,
+        height: 50,
     },
 });
