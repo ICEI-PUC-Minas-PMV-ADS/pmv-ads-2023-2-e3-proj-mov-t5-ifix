@@ -76,7 +76,7 @@ const TechnicianListOrderServices = ({ navigation }) => {
                     onPress={handleGoHome}
                     style={styles.icon}
                 />
-                <Text style={styles.titulo}>Service Orders</Text>
+                <Text style={styles.titulo}>Services Orders List</Text>
 
                 <Image style={styles.logo} source={require('../assets/logo.png')} />
             </View>
