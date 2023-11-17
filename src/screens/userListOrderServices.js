@@ -67,17 +67,20 @@ const UserListOrderServices = ({ navigation }) => {
     const onChangeSearch = query => setSearchQuery(query);
 
     return (
-        <View style={styles.container}>
+        
+        <View style={styles.container}>            
             <View style={styles.header}>
-            <IconButton
-                icon="arrow-left"
-                size={20}
-                onPress={handleGoHome}
-                style={styles.icon}
-            />
-                <Text style={styles.titulo}>Service Order List </Text>
+                <IconButton
+                    icon="arrow-left"
+                    size={20}
+                    onPress={handleGoHome}
+                    style={styles.icon}
+                />
+                <Text style={styles.titulo}>Service Orders</Text>
+
                 <Image style={styles.logo} source={require('../assets/logo.png')} />
             </View>
+            
             <Searchbar
                 placeholder="Search service order by ID"
                 onChangeText={onChangeSearch}
