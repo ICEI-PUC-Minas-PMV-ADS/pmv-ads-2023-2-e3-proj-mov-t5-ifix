@@ -8,10 +8,10 @@ import { useNavigation } from '@react-navigation/native';
 const serviceOrderList = [
     {
         id:1,
-        device: 'iPhone 12',
+        device: 'iPhone 11',
         description: 'Tela quebrada',
-        status: 'Finalizado',
-        client: 'Normandes',
+        status: 'Aguardando orçamento',
+        client: 'João',
         technician: 'Maria',
         estimatedValue: 'R$ 700,00'
     },
@@ -19,17 +19,17 @@ const serviceOrderList = [
         id:2,
         device: 'MacBook Pro',
         description: 'Não liga',
-        status: 'Finalizado',
-        client: 'Normandes',
+        status: 'Aguardando peça',
+        client: 'Joana',
         technician: 'Maria',
         estimatedValue: 'R$ 1.000,00'
     },
     {
         id:3,
-        device: 'iPhone 11',
+        device: 'iPhone 12',
         description: 'Bateria viciada',
         status: 'Finalizado',
-        client: 'Normandes',
+        client: 'Mariana',
         technician: 'Maria',
         estimatedValue: 'R$ 600,00'
     },
@@ -44,7 +44,7 @@ const serviceOrderList = [
     }
 ];
 
-const UserListOrderServices = ({ navigation }) => {
+const TechnicianListOrderServices = ({ navigation }) => {
     const [searchQuery, setSearchQuery] = useState('');
     
     const handleGoHome = () => {
@@ -58,9 +58,9 @@ const UserListOrderServices = ({ navigation }) => {
 
     const renderItem = ({ item }) => (
         <List.Item
-            title={item.device}
-            description={`Status: ${item.status}`}
-            onPress={() => navigation.navigate('Perfil', { serviceOrder: item })}
+            title={`#${item.id} ${item.device} - ${item.description}`}
+            description={`Cliente: ${item.client} - Status: ${item.status}`}
+            onPress={() => navigation.navigate('ServiceOrderDetails', { serviceOrder: item })}
         />
     );
 
@@ -95,12 +95,12 @@ const UserListOrderServices = ({ navigation }) => {
     );
 };
 
-export default UserListOrderServices;
+export default TechnicianListOrderServices;
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#f0f0f0',
+        backgroundColor: '#add8e6',
         marginTop: 20,
     },
     header: {
