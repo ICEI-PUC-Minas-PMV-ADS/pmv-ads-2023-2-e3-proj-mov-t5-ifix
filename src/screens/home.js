@@ -1,44 +1,77 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 import { Icon } from 'react-native-paper';
 import HomeButton from "../components/homeButton";
+import { firebaseAuth, db } from "../external/infra/fireBaseConfig";
+import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
 
 const Home = ({ navigation }) => {
+    const auth = firebaseAuth;
+    const [userAdmin, setUserAdmin] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const fetchUserDetails = async () => {
+            try {
+              const userId = firebaseAuth.currentUser.uid;
+              let data;
+              const q = query(collection(db, "users"), where("id", "==", userId));
+              const querySnapshot = await getDocs(q);
+              querySnapshot.forEach((doc) => {
+                // Armazena os detalhes do usuário no estado
+                data = doc.data()
+              });
+
+              setUserAdmin(data.admin)
+              console.log(userAdmin)
+            } catch (error) {
+              console.error('Erro ao buscar informações do usuário:', error);
+            } finally {
+              setLoading(false);
+            }
+          };
+      
+          fetchUserDetails();
+    }, []);
+
+    const handleLogout = async () => {
+        try {
+          await auth.signOut();
+
+          navigation.navigate('Login');
+        } catch (error) {
+          console.error('Erro ao fazer logout:', error);
+        }
+      };
 
     return (
 
         <View style={styles.container}>
-             {/* se cliente for verdadeiro irá renderizar esses itens */}
-            {/* <View style={styles.itemRow}>
-            <HomeButton text='Agendamento' iconName={'calendar'} route={() => navigation.navigate('Agendamento de serviço')}/>
-            <HomeButton text='Serviços' iconName={'cogs'} route={() => navigation.navigate('OrderService')}/>
-
-            </View>
-            <View style={styles.itemRow}>
-            <HomeButton text='Perfil' iconName={'account'} route={() => navigation.navigate('Create account')}/>
-            <HomeButton text='Sair' iconName={'exit-run'} route={() => navigation.navigate('Login')}/>
-
-            </View> */}
-
-            {/* se cliente for falso irá renderizar esses itens */}
-            <View style={styles.itemRow}>
-            <HomeButton cor='blue' text='Agenda' iconName={'calendar'} route={() => navigation.navigate('Agendamento de serviço')}/>
-            <HomeButton cor='blue'text='O.S.' iconName={'cogs'} route={() => navigation.navigate('OrderService')}/>
-
-            </View>
-            <View style={styles.itemRow}>
-            <HomeButton cor='blue' text='Clientes' iconName={'account'} route={() => navigation.navigate('Clientes')}/>
-            <HomeButton cor='blue' text='Sair' iconName={'exit-run'} route={() => navigation.navigate('Login')}/>
-
-            </View>
-
-
+            {userAdmin ? (
+                <>
+                    <View style={styles.itemRow}>
+                        <HomeButton cor='blue' text='Agenda' iconName={'calendar'} route={() => navigation.navigate('Agendamento de serviço')}/>
+                        <HomeButton cor='blue'text='O.S.' iconName={'cogs'} route={() => navigation.navigate('OrderService')}/>
+                    </View>
             
-            
-            
-            
-           
-
+                    <View style={styles.itemRow}>
+                        <HomeButton cor='blue' text='Clientes' iconName={'account'} route={() => navigation.navigate('Clientes')}/>
+                        <HomeButton cor='blue' text='Sair' iconName={'exit-run'} route={handleLogout}/>
+                    </View>
+                </>
+            ) :
+                <>
+                    <View style={styles.itemRow}>
+                        <HomeButton cor='blue' text='Agendamento' iconName={'calendar'} route={() => navigation.navigate('Agendamento de serviço')}/>
+                    </View>
+    
+                    <View style={styles.itemRow}>
+                        <HomeButton cor='blue' text='Perfil' iconName={'account'} route={() => navigation.navigate('Perfil')}/>
+                        <HomeButton cor='blue' text='Sair' iconName={'exit-run'} route={handleLogout}/>
+                    </View>
+                </>           
+        
+        }
         </View>
 
 

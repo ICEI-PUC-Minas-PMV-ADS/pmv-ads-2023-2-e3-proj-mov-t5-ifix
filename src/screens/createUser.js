@@ -26,17 +26,19 @@ const CreateUser = ({ navigation }) => {
   const createUser = async () => {
     setLoading(true);
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      await addDoc(collection(db, 'users'), 
-      { 
-        email, 
-        name, 
-        address, 
-        neighborhood, 
-        city, 
-        uf, 
-        addressNumber 
-      });
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      await addDoc(collection(db, 'users'),
+        {
+          id: userCredential.user.uid,
+          email,
+          name,
+          address,
+          neighborhood,
+          city,
+          uf,
+          addressNumber,
+          admin: false
+        });
       alert(`${name} você foi cadastrado com sucesso!`);
 
       navigation.navigate('Login');
@@ -56,10 +58,10 @@ const CreateUser = ({ navigation }) => {
       const data = response.data;
       console.log(data)
 
-      setAddress(data.logradouro || ''); 
-      setneighborhood(data.bairro || ''); 
-      setCity(data.localidade || ''); 
-      setUf(data.uf || ''); 
+      setAddress(data.logradouro || '');
+      setneighborhood(data.bairro || '');
+      setCity(data.localidade || '');
+      setUf(data.uf || '');
 
     } catch (error) {
       console.error('Erro ao consultar o CEP:', error);
@@ -76,95 +78,95 @@ const CreateUser = ({ navigation }) => {
           <Image style={styles.image} source={require('../assets/logo.png')} />
         </View>
       </View>
-    <ScrollView style={styles.scroll}>
-      <TextInput
-        style={styles.input}
-        value={email}
-        placeholder="Email"
-        autoCapitalize="none"
-        onChangeText={(text) => setEmail(text)}
-        left={<TextInput.Icon name="account" color={"#000"} />}
-        keyboardType='email-address'
-        mode="contained"
-      />
-
-      <TextInput
-        style={styles.input}
-        value={password}
-        placeholder="Password"
-        autoCapitalize="none"
-        secureTextEntry={true}
-        onChangeText={(text) => setPassword(text)}
-        left={<TextInput.Icon name="key" color={"#000"} />}
-        mode="contained"
-      />
-
-      <TextInput
-        style={styles.input}
-        value={name}
-        placeholder="Name"
-        autoCapitalize="sentences"
-        onChangeText={(text) => setName(text)}
-        left={<TextInput.Icon name="account" color={"#000"} />}
-        mode="contained"
-      />
-
-      <TextInput
-        style={styles.input}
-        value={cep}
-        placeholder="Cep"
-        autoCapitalize="none"
-        onChangeText={(text) => setCep(text)}
-        onBlur={checkCep}
-        left={<TextInput.Icon name="home-account" color={"#000"} />}
-        mode="contained"
-      />
-      <TextInput
-        style={styles.input}
-        value={address}
-        placeholder="Address"
-        autoCapitalize="none"
-        onChangeText={(text) => setAddress(text)}
-        left={<TextInput.Icon name="home-account" color={"#000"} />}
-        mode="contained"
-      />
-      <TextInput
-        style={styles.input}
-        value={uf}
-        placeholder="uf"
-        autoCapitalize="none"
-        onChangeText={(text) => setUf(text)}
-        left={<TextInput.Icon name="home-account" color={"#000"} />}
-        mode="contained"
-      />
-      <TextInput
-        style={styles.input}
-        value={city}
-        placeholder="city"
-        autoCapitalize="none"
-        onChangeText={(text) => setCity(text)}
-        left={<TextInput.Icon name="home-account" color={"#000"} />}
-        mode="contained"
-      />
+      <ScrollView style={styles.scroll}>
         <TextInput
-        style={styles.input}
-        value={neighborhood}
-        placeholder="neighborhood"
-        autoCapitalize="none"
-        onChangeText={(text) => setNeighborhood(text)}
-        left={<TextInput.Icon name="home-account" color={"#000"} />}
-        mode="contained"
-      />
-      <TextInput
-        style={styles.input}
-        value={addressNumber}
-        placeholder="addressNumber"
-        autoCapitalize="none"
-        onChangeText={(text) => setAddressNumber(text)}
-        left={<TextInput.Icon name="home-account" color={"#000"} />}
-        mode="contained"
-      />
-    </ScrollView>
+          style={styles.input}
+          value={email}
+          placeholder="Email"
+          autoCapitalize="none"
+          onChangeText={(text) => setEmail(text)}
+          left={<TextInput.Icon name="account" color={"#000"} />}
+          keyboardType='email-address'
+          mode="contained"
+        />
+
+        <TextInput
+          style={styles.input}
+          value={password}
+          placeholder="Password"
+          autoCapitalize="none"
+          secureTextEntry={true}
+          onChangeText={(text) => setPassword(text)}
+          left={<TextInput.Icon name="key" color={"#000"} />}
+          mode="contained"
+        />
+
+        <TextInput
+          style={styles.input}
+          value={name}
+          placeholder="Name"
+          autoCapitalize="sentences"
+          onChangeText={(text) => setName(text)}
+          left={<TextInput.Icon name="account" color={"#000"} />}
+          mode="contained"
+        />
+
+        <TextInput
+          style={styles.input}
+          value={cep}
+          placeholder="Cep"
+          autoCapitalize="none"
+          onChangeText={(text) => setCep(text)}
+          onBlur={checkCep}
+          left={<TextInput.Icon name="home-account" color={"#000"} />}
+          mode="contained"
+        />
+        <TextInput
+          style={styles.input}
+          value={address}
+          placeholder="Address"
+          autoCapitalize="none"
+          onChangeText={(text) => setAddress(text)}
+          left={<TextInput.Icon name="home-account" color={"#000"} />}
+          mode="contained"
+        />
+        <TextInput
+          style={styles.input}
+          value={uf}
+          placeholder="uf"
+          autoCapitalize="none"
+          onChangeText={(text) => setUf(text)}
+          left={<TextInput.Icon name="home-account" color={"#000"} />}
+          mode="contained"
+        />
+        <TextInput
+          style={styles.input}
+          value={city}
+          placeholder="city"
+          autoCapitalize="none"
+          onChangeText={(text) => setCity(text)}
+          left={<TextInput.Icon name="home-account" color={"#000"} />}
+          mode="contained"
+        />
+        <TextInput
+          style={styles.input}
+          value={neighborhood}
+          placeholder="neighborhood"
+          autoCapitalize="none"
+          onChangeText={(text) => setNeighborhood(text)}
+          left={<TextInput.Icon name="home-account" color={"#000"} />}
+          mode="contained"
+        />
+        <TextInput
+          style={styles.input}
+          value={addressNumber}
+          placeholder="addressNumber"
+          autoCapitalize="none"
+          onChangeText={(text) => setAddressNumber(text)}
+          left={<TextInput.Icon name="home-account" color={"#000"} />}
+          mode="contained"
+        />
+      </ScrollView>
       <View style={styles.container}>
         {
           loading ? <ActivityIndicator size="large" color='#0000ff' />
@@ -179,9 +181,9 @@ const CreateUser = ({ navigation }) => {
               </>
             )}
       </View>
-      
+
     </View>
-    
+
   )
 }
 
