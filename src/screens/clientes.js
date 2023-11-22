@@ -1,45 +1,55 @@
 import React, { useState, useEffect } from 'react';
-import { View, FlatList,  StyleSheet } from 'react-native';
-import firebase from 'firebase/app';
-import {List , Text, TextInput, Searchbar} from 'react-native-paper';
+import { View, FlatList, StyleSheet } from 'react-native';
+import { List, Text, Searchbar } from 'react-native-paper';
+import { collection, getDocs, query } from 'firebase/firestore';
+import { db } from '../external/infra/fireBaseConfig';
 
-const user = 
-[
-    {
-        id: 1,
-        nome: 'João'
-        
-    },
-    {
-        id:2,
-        nome: 'Maria'
 
-    },
-    {
-        id:3,
-        nome: 'José'
-    }
-]
-
-const UserList = ({navigation}) => {
+const UserList = ({ navigation }) => {
   const [users, setUsers] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
- 
+  const [loading, setLoading] = useState(false);
 
-  
+  async function handlerListClients() {
 
-  
-  const filteredUsers = users.filter((user) =>
-    user.nome.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+    try {
+      let data = [];
+      const q = query(collection(db, "users"));
+      const querySnapshot = await getDocs(q);
+
+      querySnapshot.forEach((doc) => {
+        data.push(doc.data());
+      });
+
+      setUsers(data)
+      console.log(users)
+
+    } catch (error) {
+      console.error('Erro ao buscar informações do usuário:', error);
+    } finally {
+      setLoading(false);
+    }
+
+
+  }
+
+  useEffect(() => {
+    handlerListClients()
+  }, [])
+
+
+
+  // const filteredUsers = users.filter((user) =>
+  //   user.nome.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
 
   const renderItem = ({ item }) => (
     <List.Item
-    left={props => <Text{...props} style={{fontSize:20, alignSelf:'center'}}>{item.nome}</Text>}
+      left={props => <Text{...props} style={{ fontSize: 20, alignSelf: 'center' }}>{item.name}</Text>}
       style={styles.userItem}
       title={''}
-      onPress={() => navigation.navigate('Perfil', {user: item})}
+      onPress={() => navigation.navigate('Perfil', { user: item })}
     />
   );
   const [searchQuery, setSearchQuery] = React.useState('');
@@ -48,14 +58,14 @@ const UserList = ({navigation}) => {
 
   return (
     <View style={styles.container}>
-       <Searchbar
-        
-      placeholder="Pesquisar"
-      onChangeText={onChangeSearch}
-      value={searchQuery}
-    />
+      <Searchbar
+
+        placeholder="Pesquisar"
+        onChangeText={onChangeSearch}
+        value={searchQuery}
+      />
       <FlatList
-        data={user}
+        data={users}
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
       />
@@ -82,7 +92,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#ccc',
     fontSize: 20,
     fontWeight: 'bold',
-    
+
   },
 });
 

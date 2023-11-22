@@ -1,10 +1,43 @@
 import React, { useState } from "react";
 import { Button, StyleSheet, Text, TextInput, View } from "react-native";
 import Calendario from "../components/calendario";
+import { db, firebaseAuth } from "../external/infra/fireBaseConfig";
+import { addDoc, collection } from "firebase/firestore";
 
 const ScheduleOrderService = ({ navigation }) => {
 
-  const [description, setDescription] = React.useState('');
+  const [description, setDescription] = useState('');
+  const [device, setDevice] = useState('');
+  const [date, setDate] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handlerOrderService = async () => {
+    setLoading(true)
+    try {
+
+      const userId = firebaseAuth.currentUser.uid;
+
+      await addDoc(collection(db, 'order_service'),
+        {
+          id: userId,
+          device,
+          description,
+          date,
+        });
+      alert(`Agendamento feito com sucesso`);
+      setDevice('')
+      setDescription('')
+      setDate('')
+
+    } catch (err) {
+      alert(`Não foi possivel realizar um agendamento`);
+      console.log(err)
+    } finally {
+
+      setLoading(false)
+    }
+
+  }
 
   return (
     <View style={styles.container}>
@@ -31,7 +64,8 @@ const ScheduleOrderService = ({ navigation }) => {
 
             }}
             defaultValue="Informe seu dispositivo"
-
+            value={device}
+            onChangeText={(text) => setDevice(text)}
           />
         </View>
 
@@ -39,7 +73,7 @@ const ScheduleOrderService = ({ navigation }) => {
       </View>
 
       <Text style={styles.label}>Data</Text>
-      <Calendario />
+      <Calendario onDate={setDate} />
 
       <Text style={styles.label}>Descrição do Problema</Text>
       <TextInput
@@ -47,7 +81,7 @@ const ScheduleOrderService = ({ navigation }) => {
         multiline={true}
         numberOfLines={5}
         maxLength={400}
-        onChangeText={text => onChangeText(text)}
+        onChangeText={text => setDescription(text)}
         value={description}
         placeholder="Descrição do Problema"
         style={{
@@ -59,10 +93,11 @@ const ScheduleOrderService = ({ navigation }) => {
           fontSize: 18
 
         }}
+
       />
       <Button
         title="Salvar"
-        onPress={() => console.log('Autorizado')}
+        onPress={handlerOrderService}
         color={'green'}
       />
 
