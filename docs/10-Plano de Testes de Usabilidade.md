@@ -2,7 +2,7 @@
 
 Os requisitos para realização dos testes de software são: 
 
-- Aplicativo disponível para utilizar em Android e IOS
+- Aplicativo disponível para utilizar em Android e IOS.
 - Smartphones (Android e/ou IOS), ou emulador Mobile.
 - Conectividade de Internet para acesso ao aplicativo e às plataformas (APISs).
 
