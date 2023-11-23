@@ -62,6 +62,7 @@ const Home = ({ navigation }) => {
         <>
           <View style={styles.itemRow}>
             <HomeButton cor='blue' text='Agendamento' iconName={'calendar'} route={() => navigation.navigate('Agendamento de serviço')} />
+            <HomeButton cor='blue' text='Order Service List' iconName={'clipboard-list'} route={() => navigation.navigate('ListOrderServices')} />
           </View>
 
           <View style={styles.itemRow}>
