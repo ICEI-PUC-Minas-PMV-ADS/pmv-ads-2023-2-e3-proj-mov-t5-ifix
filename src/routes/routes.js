@@ -15,6 +15,26 @@ import { Image } from 'react-native';
 const Stack = createNativeStackNavigator();
 const auth = firebaseAuth;
 
+const ROUTES = {
+  HOME: 'Home',
+  CLIENTES: 'Clientes',
+  PERFIL: 'Perfil',
+  AGENDAMENTO: 'Agendamento de serviço',
+  ORDER_SERVICE: 'OrderService',
+  LIST_ORDER_SERVICES: 'ListOrderServices',
+  LOGIN: 'Login',
+  CREATE_ACCOUNT: 'Create account'
+};
+
+function LogoTitle() {
+  return (
+    <Image
+      style={{ width: 50, height: 50, marginRight: 10  }}
+      source={require('../assets/logo.png')}
+    />
+  );
+}
+
 const Routes = () => {
   const [initializing, setInitializing] = useState(true);
   const [user, setUser] = useState(null);
@@ -34,31 +54,22 @@ const Routes = () => {
     return null;
   }
 
-function LogoTitle() {
-    return (
-      <Image
-        style={{ width: 50, height: 50, marginRight: 10  }}
-        source={require('../assets/logo.png')}
-      />
-    );
-  }
-
   return (
     <NavigationContainer>
       <Stack.Navigator>
         {user ? (
           <>
-            <Stack.Screen name="Home" component={Home} />
-            <Stack.Screen name="Clientes" component={UserList} />
-            <Stack.Screen name="Perfil" component={Perfil} />
-            <Stack.Screen name="Agendamento de serviço" component={ScheduleOrderService} />
-            <Stack.Screen name="OrderService" component={OrderService} />
-            <Stack.Screen name="ListOrderServices" component={ListOrderServices} options={{ headerTitle: 'Lista', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}} />
+            <Stack.Screen name={ROUTES.HOME} component={Home} />
+            <Stack.Screen name={ROUTES.CLIENTES} component={UserList} />
+            <Stack.Screen name={ROUTES.PERFIL} component={Perfil} />
+            <Stack.Screen name={ROUTES.AGENDAMENTO} component={ScheduleOrderService} />
+            <Stack.Screen name={ROUTES.ORDER_SERVICE} component={OrderService} />
+            <Stack.Screen name={ROUTES.LIST_ORDER_SERVICES} component={ListOrderServices} options={{ headerTitle: 'Lista', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}} />
           </>
         ) : (
           <>
-          <Stack.Screen name="Login" component={Login} />
-          <Stack.Screen name="Create account" component={CreateUser} />
+            <Stack.Screen name={ROUTES.LOGIN} component={Login} />
+            <Stack.Screen name={ROUTES.CREATE_ACCOUNT} component={CreateUser} />
           </>
         )}
       </Stack.Navigator>
