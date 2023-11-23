@@ -17,9 +17,9 @@ const auth = firebaseAuth;
 
 const ROUTES = {
   HOME: 'Home',
-  CLIENTES: 'Clientes',
+  PROFILE: 'Clientes',
   PERFIL: 'Perfil',
-  AGENDAMENTO: 'Agendamento de serviço',
+  SCHEDULE_SERVICE: 'Agendamento de serviço',
   ORDER_SERVICE: 'OrderService',
   LIST_ORDER_SERVICES: 'ListOrderServices',
   LOGIN: 'Login',
@@ -60,9 +60,9 @@ const Routes = () => {
         {user ? (
           <>
             <Stack.Screen name={ROUTES.HOME} component={Home} />
-            <Stack.Screen name={ROUTES.CLIENTES} component={UserList} />
+            <Stack.Screen name={ROUTES.PROFILE} component={UserList} />
             <Stack.Screen name={ROUTES.PERFIL} component={Perfil} />
-            <Stack.Screen name={ROUTES.AGENDAMENTO} component={ScheduleOrderService} />
+            <Stack.Screen name={ROUTES.SCHEDULE_SERVICE} component={ScheduleOrderService} />
             <Stack.Screen name={ROUTES.ORDER_SERVICE} component={OrderService} />
             <Stack.Screen name={ROUTES.LIST_ORDER_SERVICES} component={ListOrderServices} options={{ headerTitle: 'Lista', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}} />
           </>
