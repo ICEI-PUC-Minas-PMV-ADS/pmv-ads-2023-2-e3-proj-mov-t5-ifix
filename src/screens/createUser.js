@@ -93,7 +93,7 @@ const CreateUser = ({ navigation }) => {
         <TextInput
           style={styles.input}
           value={password}
-          placeholder="Password"
+          placeholder="Senha"
           autoCapitalize="none"
           secureTextEntry={true}
           onChangeText={(text) => setPassword(text)}
@@ -104,7 +104,7 @@ const CreateUser = ({ navigation }) => {
         <TextInput
           style={styles.input}
           value={name}
-          placeholder="Name"
+          placeholder="Nome"
           autoCapitalize="sentences"
           onChangeText={(text) => setName(text)}
           left={<TextInput.Icon name="account" color={"#000"} />}
@@ -124,7 +124,7 @@ const CreateUser = ({ navigation }) => {
         <TextInput
           style={styles.input}
           value={address}
-          placeholder="Address"
+          placeholder="Logradouro"
           autoCapitalize="none"
           onChangeText={(text) => setAddress(text)}
           left={<TextInput.Icon name="home-account" color={"#000"} />}
@@ -132,40 +132,44 @@ const CreateUser = ({ navigation }) => {
         />
         <TextInput
           style={styles.input}
-          value={uf}
-          placeholder="uf"
+          value={addressNumber}
+          placeholder="Numero"
           autoCapitalize="none"
-          onChangeText={(text) => setUf(text)}
+          onChangeText={(text) => setAddressNumber(text)}
           left={<TextInput.Icon name="home-account" color={"#000"} />}
           mode="contained"
         />
         <TextInput
           style={styles.input}
           value={city}
-          placeholder="city"
+          placeholder="Cidade"
           autoCapitalize="none"
           onChangeText={(text) => setCity(text)}
           left={<TextInput.Icon name="home-account" color={"#000"} />}
           mode="contained"
         />
-        <TextInput
+         <TextInput
           style={styles.input}
           value={neighborhood}
-          placeholder="neighborhood"
+          placeholder="Bairro"
           autoCapitalize="none"
           onChangeText={(text) => setNeighborhood(text)}
           left={<TextInput.Icon name="home-account" color={"#000"} />}
           mode="contained"
         />
+
         <TextInput
           style={styles.input}
-          value={addressNumber}
-          placeholder="addressNumber"
+          value={uf}
+          placeholder="UF"
           autoCapitalize="none"
-          onChangeText={(text) => setAddressNumber(text)}
+          onChangeText={(text) => setUf(text)}
           left={<TextInput.Icon name="home-account" color={"#000"} />}
           mode="contained"
         />
+        
+       
+        
       </ScrollView>
       <View style={styles.container}>
         {
@@ -173,10 +177,10 @@ const CreateUser = ({ navigation }) => {
             : (
               <>
                 <Button title="Logins" onPress={createUser} style={styles.button} mode="contained">
-                  Save
+                  Criar
                 </Button>
                 <Button title="Cancel" onPress={navigation.goBack} style={styles.buttonCancel} mode="contained">
-                  Cancel
+                  Cancelar
                 </Button>
               </>
             )}

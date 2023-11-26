@@ -50,7 +50,7 @@ const Home = ({ navigation }) => {
         <>
           <View style={styles.itemRow}>
             <HomeButton cor='blue' text='Agenda' iconName={'calendar'} route={() => navigation.navigate('Agendamento de serviço')} />
-            <HomeButton cor='blue' text='O.S.' iconName={'cogs'} route={() => navigation.navigate('OrderService')} />
+            <HomeButton cor='blue' text='Ordens Serviço' iconName={'cogs'} route={() => navigation.navigate('OrderService')} />
           </View>
 
           <View style={styles.itemRow}>
@@ -61,17 +61,17 @@ const Home = ({ navigation }) => {
       ) :
         <>
           <View style={styles.itemRow}>
-            <HomeButton cor='blue' text='Agendamento' iconName={'calendar'} route={() => navigation.navigate('Agendamento de serviço')} />
-            <HomeButton cor='blue' text='Order Service List' iconName={'clipboard-list'} route={() => navigation.navigate('ListOrderServices')} />
+            <HomeButton cor='green' text='Agendamento' iconName={'calendar'} route={() => navigation.navigate('Agendamento de serviço')} />
+            <HomeButton cor='green' text='Status Serviço' iconName={'clipboard-list'} route={() => navigation.navigate('ListOrderServices')} />
           </View>
 
           <View style={styles.itemRow}>
-            <HomeButton cor='blue' text='Perfil' iconName={'account'} route={() => navigation.navigate('Perfil')} />
-            <HomeButton cor='blue' text='Sair' iconName={'exit-run'} route={handleLogout} />
+            <HomeButton cor='green' text='Perfil' iconName={'account'} route={() => navigation.navigate('Perfil')} />
+            <HomeButton cor='green' text='Sair' iconName={'exit-run'} route={handleLogout} />
           </View>
         </>
 
-      }
+}
     </View>
 
 

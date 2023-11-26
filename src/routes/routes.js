@@ -59,11 +59,11 @@ const Routes = () => {
       <Stack.Navigator>
         {user ? (
           <>
-            <Stack.Screen name={ROUTES.HOME} component={Home} />
-            <Stack.Screen name={ROUTES.PROFILE} component={UserList} />
-            <Stack.Screen name={ROUTES.PERFIL} component={Perfil} />
-            <Stack.Screen name={ROUTES.SCHEDULE_SERVICE} component={ScheduleOrderService} />
-            <Stack.Screen name={ROUTES.ORDER_SERVICE} component={OrderService} />
+            <Stack.Screen name={ROUTES.HOME} component={Home} options={{ headerTitle: 'Pagina inicial', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}}  />
+            <Stack.Screen name={ROUTES.PROFILE} component={UserList} options={{ headerTitle: 'Clientes', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}} />
+            <Stack.Screen name={ROUTES.PERFIL} component={Perfil} options={{ headerTitle: 'Minha Conta', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}} />
+            <Stack.Screen name={ROUTES.SCHEDULE_SERVICE} component={ScheduleOrderService} options={{ headerTitle: 'Agendar Serviço', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}}  />
+            <Stack.Screen name={ROUTES.ORDER_SERVICE} component={OrderService} options={{ headerTitle: 'Ordem de Serviço', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}} />
             <Stack.Screen name={ROUTES.LIST_ORDER_SERVICES} component={ListOrderServices} options={{ headerTitle: 'Lista', headerTitleAlign: 'center', headerRight: props => <LogoTitle {...props} />}} />
           </>
         ) : (
