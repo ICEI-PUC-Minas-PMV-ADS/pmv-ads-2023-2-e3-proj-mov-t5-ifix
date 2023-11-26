@@ -37,7 +37,7 @@ const Login = ({ navigation }) => {
           <Image style={styles.image} source={require('../assets/logo.png')} />
         </View>
 
-        <Headline style={styles.textHeader} >Technical Suport for Apple products</Headline>
+        <Headline style={styles.textHeader} >Suporte técnico para produtos Apple</Headline>
       </View>
 
       <TextInput
@@ -54,7 +54,7 @@ const Login = ({ navigation }) => {
       <TextInput
         style={styles.input}
         value={password}
-        placeholder="Password"
+        placeholder="Senha"
         autoCapitalize="none"
         secureTextEntry={true}
         onChangeText={(text) => setPassword(text)}
@@ -68,10 +68,10 @@ const Login = ({ navigation }) => {
             : (
               <>
                 <Button title="Logins" onPress={signIn} style={styles.buttonLogin} mode="contained">
-                  Login
+                  Acessar
                 </Button>
                 <Button title="create account" onPress={() => navigation.navigate('Create account')} style={styles.buttonCreate} mode="contained">
-                  Create Account
+                  Criar conta
                 </Button>
               </>
             )}
